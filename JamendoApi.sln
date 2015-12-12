@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JamendoApi", "JamendoApi\JamendoApi.csproj", "{1CF23076-065D-4E43-AF0C-146829B4EF2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JamendoApi.Tests", "JamendoApi.Tests\JamendoApi.Tests.csproj", "{96E00EB9-8DA8-46A7-B70B-B49AEDA073D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CF23076-065D-4E43-AF0C-146829B4EF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF23076-065D-4E43-AF0C-146829B4EF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF23076-065D-4E43-AF0C-146829B4EF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF23076-065D-4E43-AF0C-146829B4EF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E00EB9-8DA8-46A7-B70B-B49AEDA073D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E00EB9-8DA8-46A7-B70B-B49AEDA073D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E00EB9-8DA8-46A7-B70B-B49AEDA073D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E00EB9-8DA8-46A7-B70B-B49AEDA073D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
