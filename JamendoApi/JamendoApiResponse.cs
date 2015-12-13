@@ -1,4 +1,4 @@
-﻿using JamendoApi.Entities;
+﻿using JamendoApi.Parts;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,5 +18,11 @@ namespace JamendoApi
         /// </summary>
         [JsonProperty(PropertyName = "headers", Required = Required.Always)]
         public Headers Headers { get; private set; }
+
+        /// <summary>
+        /// Gets the response's results.
+        /// </summary>
+        [JsonProperty(PropertyName = "results", Required = Required.Always)]
+        public TResult[] Results { get; private set; }
     }
 }

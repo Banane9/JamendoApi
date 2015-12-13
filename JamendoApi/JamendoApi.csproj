@@ -37,8 +37,11 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Headers.cs" />
-    <Compile Include="Entities\JamendoApiEntity.cs" />
+    <Compile Include="ApiParts\Albums\MusicInfoAlbum.cs" />
+    <Compile Include="ApiParts\Albums\BasicAlbum.cs" />
+    <Compile Include="ApiParts\Albums\TracksAlbum.cs" />
+    <Compile Include="ApiParts\Headers.cs" />
+    <Compile Include="ApiParts\JamendoApiEntity.cs" />
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

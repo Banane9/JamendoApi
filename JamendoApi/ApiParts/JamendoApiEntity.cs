@@ -1,4 +1,4 @@
-﻿namespace JamendoApi.Entities
+﻿namespace JamendoApi.Parts
 {
     public class JamendoApiEntity
     {

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JamendoApi.Entities
+namespace JamendoApi.Parts
 {
     /// <summary>
     /// Represents the Headers object which is part of every API response.
