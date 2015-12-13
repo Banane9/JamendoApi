@@ -1,4 +1,4 @@
-﻿using JamendoApi.Parts;
+﻿using JamendoApi.ApiParts;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace JamendoApi
     /// </summary>
     /// <typeparam name="TResult">The type of entities in the results field.</typeparam>
     [JsonObject]
-    public sealed class JamendoApiResponse<TResult> where TResult : JamendoApiEntity
+    public sealed class JamendoApiResponse<TResult> where TResult : IJamendoApiEntity
     {
         /// <summary>
         /// Gets the response's headers.

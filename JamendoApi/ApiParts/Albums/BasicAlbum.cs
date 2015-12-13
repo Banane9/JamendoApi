@@ -1,5 +1,4 @@
-﻿using JamendoApi.Parts;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ namespace JamendoApi.ApiParts.Albums
     /// Documented here: https://developer.jamendo.com/v3.0/albums
     /// </summary>
     [JsonObject]
-    public class BasicAlbum : JamendoApiEntity
+    public class BasicAlbum : IJamendoApiEntity
     {
         /// <summary>
         /// Gets the artist's Id.

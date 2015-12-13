@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JamendoApi.Parts
+namespace JamendoApi.ApiParts
 {
     /// <summary>
     /// Represents the Headers object which is part of every API response.
@@ -45,6 +45,9 @@ namespace JamendoApi.Parts
         [JsonProperty(PropertyName = "warnings", Required = Required.Always)]
         public string Warnings { get; private set; }
 
+        /// <summary>
+        /// Lists the possible values for the status field.
+        /// </summary>
         public enum ResponseStatus
         {
             /// <summary>
@@ -58,6 +61,9 @@ namespace JamendoApi.Parts
             Failed
         }
 
+        /// <summary>
+        /// Lists the possible values for the code field.
+        /// </summary>
         public enum StatusCode
         {
             /// <summary>

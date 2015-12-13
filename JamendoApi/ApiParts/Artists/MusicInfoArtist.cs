@@ -3,15 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JamendoApi.ApiParts.Albums
+namespace JamendoApi.ApiParts.Artists
 {
     /// <summary>
-    /// Represents the Album object which is part of the /albums/musicinfo results.
+    /// Represents the Artist object which is part of the /artists/musicinfo results.
     /// <para/>
-    /// Documented here: https://developer.jamendo.com/v3.0/albums/musicinfo
+    /// Documented here: https://developer.jamendo.com/v3.0/artists/musicinfo
     /// </summary>
     [JsonObject]
-    public class MusicInfoAlbum : BasicAlbum
+    public sealed class MusicInfoArtist
     {
         /// <summary>
         /// Gets the album's music info.
