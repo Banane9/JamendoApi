@@ -9,7 +9,7 @@ namespace JamendoApi.Tests
     public class Headers
     {
         [TestMethod]
-        public void Deserializes()
+        public void HeaderDeserializes()
         {
             var deserializer = new JsonSerializer();
             var headers = deserializer.Deserialize<ApiParts.Headers>(new JsonTextReader(new StringReader(
