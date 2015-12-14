@@ -16,6 +16,8 @@ namespace JamendoApi.ApiParts.Feeds
     {
         /// <summary>
         /// Gets the languages that the feed was translated to (as two-letter codes).
+        /// <para/>
+        /// Title, Subtitle and Text fields will contain empty values for language codes not listed here.
         /// </summary>
         [JsonProperty(PropertyName = "lang", Required = Required.Always)]
         public string[] AvailableLanguages { get; private set; }
@@ -61,13 +63,17 @@ namespace JamendoApi.ApiParts.Feeds
         /// <summary>
         /// Gets the different subtitles connected to their two-letter language code.
         /// Subtitles may or may not be there even if the feed has a translation for the language.
+        /// <para/>
+        /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
         // Todo: Make sure it works even when there's an array, if jamendo doesn't change it
         [JsonProperty(PropertyName = "subtitle", Required = Required.Always)]
         public Dictionary<string, string> Subtitle { get; private set; }
 
         /// <summary>
-        /// Gets the Id of the feed's target entity.
+        /// Gets the Id of the feed's target entity. 0 if the feed doesn't have a target entity.
+        /// <para/>
+        /// Only album, track, artist or playlist targets will have an Id.
         /// </summary>
         [JsonProperty(PropertyName = "joinid", Required = Required.Always)]
         public uint TargetId { get; private set; }
@@ -80,21 +86,26 @@ namespace JamendoApi.ApiParts.Feeds
 
         /// <summary>
         /// Gets the different texts connected to their two-letter language code.
+        /// <para/>
+        /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
         [JsonProperty(PropertyName = "text", Required = Required.Always)]
         public Dictionary<string, string> Text { get; private set; }
 
         /// <summary>
         /// Gets the different titles connected to their two-letter language code.
+        /// <para/>
+        /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
         [JsonProperty(PropertyName = "title", Required = Required.Always)]
         public Dictionary<string, string> Title { get; private set; }
 
         /// <summary>
-        /// Gets the type (artist, album, etc.) of the feed's target entity.
+        /// Gets the type (artist, album, etc.) of the feed. Defines whether it has a target entity or not.
         /// </summary>
         [JsonProperty(PropertyName = "type", Required = Required.Always)]
-        public string Type { get; private set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public FeedType Type { get; private set; }
 
         /// <summary>
         /// Represents the images object that's part of the feed result.
@@ -124,6 +135,22 @@ namespace JamendoApi.ApiParts.Feeds
             /// </summary>
             [JsonProperty(PropertyName = "size996_350", Required = Required.Always)]
             public string Size996x350 { get; private set; }
+        }
+
+        /// <summary>
+        /// Lists the possible values for the type field.
+        /// </summary>
+        public enum FeedType
+        {
+            Album,
+            Artist,
+            Playlist,
+            Track,
+            News,
+            Interview,
+            Contest,
+            Video,
+            Update
         }
 
         /// <summary>
