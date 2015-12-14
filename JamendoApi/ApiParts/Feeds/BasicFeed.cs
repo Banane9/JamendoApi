@@ -12,7 +12,7 @@ namespace JamendoApi.ApiParts.Feeds
     /// Documented here: https://developer.jamendo.com/v3.0/feeds
     /// </summary>
     [JsonObject]
-    public sealed class BasicFeed : IJamendoApiEntity
+    public sealed class BasicFeed
     {
         /// <summary>
         /// Gets the languages that the feed was translated to (as two-letter codes).

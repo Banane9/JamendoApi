@@ -12,7 +12,7 @@ namespace JamendoApi.ApiParts.Artists
     /// Documented here: https://developer.jamendo.com/v3.0/artists/tracks
     /// </summary>
     [JsonObject]
-    public sealed class TracksArtist : IJamendoApiEntity
+    public sealed class TracksArtist
     {
         /// <summary>
         /// Gets the artist's Id.

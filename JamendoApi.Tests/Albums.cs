@@ -16,7 +16,7 @@ namespace JamendoApi.Tests
         [TestMethod]
         public void BasicAlbumDeserializes()
         {
-            var response = deserializer.Deserialize<JamendoApiResponse<BasicAlbum>>(new JsonTextReader(new StringReader(
+            var response = deserializer.Deserialize<JamendoApiResponse<BasicAlbum[]>>(new JsonTextReader(new StringReader(
                 "{\"headers\":{\"status\":\"success\",\"code\":0,\"error_message\":\"\",\"warnings\":\"\",\"results_count\":1},\"results\":[{\"id\":\"24\",\"name\":\"Premiers Jets\",\"releasedate\":\"2004 - 12 - 17\",\"artist_id\":\"7\",\"artist_name\":\"TriFace\",\"image\":\"https://imgjam1.jamendo.com/albums/s0/24/covers/1.200.jpg\",\"zip\":\"https://mp3d.jamendo.com/download/a24/mp32/\",\"shorturl\":\"http://jamen.do/l/a24\",\"shareurl\":\"http://www.jamendo.com/list/a24\"}]}")));
 
             var result = response.Results[0];
@@ -34,7 +34,7 @@ namespace JamendoApi.Tests
         [TestMethod]
         public void MusicInfoAlbumDeserializes()
         {
-            var response = deserializer.Deserialize<JamendoApiResponse<MusicInfoAlbum>>(new JsonTextReader(new StringReader(
+            var response = deserializer.Deserialize<JamendoApiResponse<MusicInfoAlbum[]>>(new JsonTextReader(new StringReader(
                 "{\"headers\":{\"status\":\"success\",\"code\":0,\"error_message\":\"\",\"warnings\":\"\",\"results_count\":1},\"results\":[{\"id\":\"24\",\"name\":\"Premiers Jets\",\"releasedate\":\"2004 - 12 - 17\",\"artist_id\":\"7\",\"artist_name\":\"TriFace\",\"image\":\"https://imgjam1.jamendo.com/albums/s0/24/covers/1.200.jpg\",\"zip\":\"https://mp3d.jamendo.com/download/a24/mp32/\",\"shorturl\":\"http://jamen.do/l/a24\",\"shareurl\":\"http://www.jamendo.com/list/a24\",\"musicinfo\":{\"tags\":[\"angry\",\"metal\",\"drum\",\"hardrock\",\"hardcore\"],\"description\":{\"en\":\"Description\",\"de\":\"Beschreibung\"}}}]}")));
 
             var result = response.Results[0];
@@ -58,7 +58,7 @@ namespace JamendoApi.Tests
         [TestMethod]
         public void TracksAlbumDeserializes()
         {
-            var response = deserializer.Deserialize<JamendoApiResponse<TracksAlbum>>(new JsonTextReader(new StringReader(
+            var response = deserializer.Deserialize<JamendoApiResponse<TracksAlbum[]>>(new JsonTextReader(new StringReader(
                 "{\"headers\":{\"status\":\"success\",\"code\":0,\"error_message\":\"\",\"warnings\":\"\",\"results_count\":1},\"results\":[{\"id\":\"24\",\"name\":\"Premiers Jets\",\"releasedate\":\"2004-12-17\",\"artist_id\":\"7\",\"artist_name\":\"TriFace\",\"image\":\"https://imgjam1.jamendo.com/albums/s0/24/covers/1.200.jpg\",\"zip\":\"https://mp3d.jamendo.com/download/a24/mp32/\",\"tracks\":[{\"id\":\"168\",\"position\":\"1\",\"name\":\"J'm'e FPM\",\"duration\":\"183\",\"license_ccurl\":\"http://creativecommons.org/licenses/by-nc-sa/2.0/\",\"audio\":\"https://mp3l.jamendo.com/?trackid=168&format=mp31&from=app-9d9f42e3\",\"audiodownload\":\"https://mp3d.jamendo.com/download/track/168/mp32/\"},{\"id\":\"169\",\"position\":\"2\",\"name\":\"Trio HxC\",\"duration\":\"101\",\"license_ccurl\":\"http://creativecommons.org/licenses/by-nc-sa/2.0/\",\"audio\":\"https://mp3l.jamendo.com/?trackid=169&format=mp31&from=app-9d9f42e3\",\"audiodownload\":\"https://mp3d.jamendo.com/download/track/169/mp32/\"}]}]}")));
 
             var result = response.Results[0];

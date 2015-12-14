@@ -44,9 +44,9 @@
     <Compile Include="ApiParts\Artists\LocationsArtist.cs" />
     <Compile Include="ApiParts\Artists\MusicInfoArtist.cs" />
     <Compile Include="ApiParts\Artists\TracksArtist.cs" />
+    <Compile Include="ApiParts\Autocomplete\Matches.cs" />
     <Compile Include="ApiParts\Feeds\BasicFeed.cs" />
     <Compile Include="ApiParts\Headers.cs" />
-    <Compile Include="ApiParts\IJamendoApiEntity.cs" />
     <Compile Include="ApiParts\Generic\MusicInfo.cs" />
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />

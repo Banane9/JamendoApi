@@ -12,7 +12,7 @@ namespace JamendoApi.ApiParts.Albums
     /// Documented here: https://developer.jamendo.com/v3.0/albums
     /// </summary>
     [JsonObject]
-    public class BasicAlbum : IJamendoApiEntity
+    public class BasicAlbum
     {
         /// <summary>
         /// Gets the artist's Id.
