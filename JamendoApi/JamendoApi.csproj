@@ -51,6 +51,8 @@
     <Compile Include="ApiParts\Radios\BasicRadio.cs" />
     <Compile Include="ApiParts\Radios\RadioType.cs" />
     <Compile Include="ApiParts\Radios\StreamRadio.cs" />
+    <Compile Include="ApiParts\Reviews\AlbumReview.cs" />
+    <Compile Include="ApiParts\Reviews\TrackReview.cs" />
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

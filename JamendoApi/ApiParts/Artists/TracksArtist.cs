@@ -61,7 +61,7 @@ namespace JamendoApi.ApiParts.Artists
             /// Gets the Id of the album that the track is part of. No value when track is a single.
             /// </summary>
             [JsonProperty(PropertyName = "album_id", Required = Required.AllowNull)]
-            public uint? AlbumId { get; set; }
+            public uint? AlbumId { get; private set; }
 
             /// <summary>
             /// Gets the url of a cover of the album that the track is part of in the size specified or a default one.
@@ -80,25 +80,25 @@ namespace JamendoApi.ApiParts.Artists
             /// Gets the url of the track's audio in the specified audio format or 96kbps MP3 by default.
             /// </summary>
             [JsonProperty(PropertyName = "audio", Required = Required.Always)]
-            public string Audio { get; set; }
+            public string Audio { get; private set; }
 
             /// <summary>
             /// Gets the url of the track's audio in the specified audio-dl format, the audio format or variable bit-rate MP3 by default.
             /// </summary>
             [JsonProperty(PropertyName = "audiodownload", Required = Required.Always)]
-            public string AudioDownload { get; set; }
+            public string AudioDownload { get; private set; }
 
             /// <summary>
             /// Gets the track's duration in seconds.
             /// </summary>
             [JsonProperty(PropertyName = "duration", Required = Required.Always)]
-            public uint Duration { get; set; }
+            public uint Duration { get; private set; }
 
             /// <summary>
             /// Gets the track's Id.
             /// </summary>
             [JsonProperty(PropertyName = "id", Required = Required.Always)]
-            public uint Id { get; set; }
+            public uint Id { get; private set; }
 
             /// <summary>
             /// Gets the url of a track cover in the size specified or a default one.
@@ -119,13 +119,13 @@ namespace JamendoApi.ApiParts.Artists
             /// Gets the track's CreativeCommons license url.
             /// </summary>
             [JsonProperty(PropertyName = "license_ccurl", Required = Required.Always)]
-            public string LicenseCCUrl { get; set; }
+            public string LicenseCCUrl { get; private set; }
 
             /// <summary>
             /// Gets the track's name.
             /// </summary>
             [JsonProperty(PropertyName = "name", Required = Required.Always)]
-            public string Name { get; set; }
+            public string Name { get; private set; }
 
             /// <summary>
             /// Gets the track's release date.
