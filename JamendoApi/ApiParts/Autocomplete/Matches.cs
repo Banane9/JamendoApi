@@ -6,9 +6,9 @@ using System.Linq;
 namespace JamendoApi.ApiParts.Autocomplete
 {
     /// <summary>
-    /// Represents the match collection object which is part of the /artists/ results.
+    /// Represents the match collection object which is part of the /autocomplete/ results.
     /// <para/>
-    /// Documented here: https://developer.jamendo.com/v3.0/artists
+    /// Documented here: https://developer.jamendo.com/v3.0/autocomplete
     /// </summary>
     [JsonDictionary]
     public sealed class Matches : Dictionary<Matches.Entity, Matches.Match[]>
