@@ -48,6 +48,8 @@
     <Compile Include="ApiParts\Feeds\BasicFeed.cs" />
     <Compile Include="ApiParts\Headers.cs" />
     <Compile Include="ApiParts\Generic\MusicInfo.cs" />
+    <Compile Include="ApiParts\Playlists\BasicPlaylist.cs" />
+    <Compile Include="ApiParts\Playlists\TracksPlaylist.cs" />
     <Compile Include="ApiParts\Radios\BasicRadio.cs" />
     <Compile Include="ApiParts\Radios\RadioType.cs" />
     <Compile Include="ApiParts\Radios\StreamRadio.cs" />
