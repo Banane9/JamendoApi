@@ -67,6 +67,7 @@ namespace JamendoApi.ApiParts.Playlists
         {
             /// <summary>
             /// Gets the Id of the abum that the track is part of.
+            /// Empty when track is a single.
             /// </summary>
             [JsonProperty(PropertyName = "album_id", Required = Required.Always)]
             public uint? AlbumId { get; private set; }

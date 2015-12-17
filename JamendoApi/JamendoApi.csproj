@@ -55,6 +55,12 @@
     <Compile Include="ApiParts\Radios\StreamRadio.cs" />
     <Compile Include="ApiParts\Reviews\AlbumReview.cs" />
     <Compile Include="ApiParts\Reviews\TrackReview.cs" />
+    <Compile Include="ApiParts\Tracks\BasicTrack.cs" />
+    <Compile Include="ApiParts\Tracks\SimiliarTrack.cs" />
+    <Compile Include="Common\AcousticElectric.cs" />
+    <Compile Include="Common\Gender.cs" />
+    <Compile Include="Common\Tempo.cs" />
+    <Compile Include="Common\VocalInstrumental.cs" />
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
