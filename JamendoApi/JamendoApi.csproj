@@ -45,6 +45,9 @@
     <Compile Include="ApiParts\Artists\MusicInfoArtist.cs" />
     <Compile Include="ApiParts\Artists\TracksArtist.cs" />
     <Compile Include="ApiParts\Autocomplete\Matches.cs" />
+    <Compile Include="ApiParts\Users\AlbumsUser.cs" />
+    <Compile Include="ApiParts\Users\ArtistsUser.cs" />
+    <Compile Include="ApiParts\Users\BasicUser.cs" />
     <Compile Include="ApiParts\Feeds\BasicFeed.cs" />
     <Compile Include="ApiParts\Headers.cs" />
     <Compile Include="ApiParts\Generic\MusicInfo.cs" />
@@ -57,6 +60,7 @@
     <Compile Include="ApiParts\Reviews\TrackReview.cs" />
     <Compile Include="ApiParts\Tracks\BasicTrack.cs" />
     <Compile Include="ApiParts\Tracks\SimiliarTrack.cs" />
+    <Compile Include="ApiParts\Users\TracksUser.cs" />
     <Compile Include="Common\AcousticElectric.cs" />
     <Compile Include="Common\Gender.cs" />
     <Compile Include="Common\Tempo.cs" />

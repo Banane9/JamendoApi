@@ -6,9 +6,9 @@ using System.Linq;
 namespace JamendoApi.ApiParts.Tracks
 {
     /// <summary>
-    /// Represents the Track object which is part of the /tracks/ results.
+    /// Represents the Track object which is part of the /tracks/similar results.
     /// <para/>
-    /// Documented here: https://developer.jamendo.com/v3.0/tracks
+    /// Documented here: https://developer.jamendo.com/v3.0/tracks/similar
     /// </summary>
     [JsonObject]
     public sealed class SimiliarTrack : BasicTrack
