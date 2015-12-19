@@ -7,6 +7,8 @@ namespace JamendoApi
 {
     public sealed class JamendoApiClient
     {
+        public const uint MaxLimit = 200;
+        public const uint MinLimit = 1;
         private const string baseUrl = "https://api.jamendo.com/v3.0/";
         private readonly string clientId;
 

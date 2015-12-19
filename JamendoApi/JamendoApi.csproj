@@ -37,6 +37,11 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiCalls\Albums\AlbumsCall.cs" />
+    <Compile Include="ApiCalls\CallInformation.cs" />
+    <Compile Include="ApiCalls\Parameter.cs" />
+    <Compile Include="ApiCalls\Parameters\CoverImageSizeParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\OffsetParameter.cs" />
     <Compile Include="ApiParts\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiParts\Albums\BasicAlbum.cs" />
     <Compile Include="ApiParts\Albums\TracksAlbum.cs" />
