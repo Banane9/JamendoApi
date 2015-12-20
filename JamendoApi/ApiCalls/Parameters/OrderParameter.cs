@@ -40,10 +40,10 @@ namespace JamendoApi.ApiCalls.Parameters
     /// </summary>
     public enum SortOrder
     {
-        [ApiName("desc")]
-        Descending,
-
         [ApiName("asc")]
-        Ascending
+        Ascending,
+
+        [ApiName("desc")]
+        Descending
     }
 }

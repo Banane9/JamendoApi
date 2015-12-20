@@ -8,11 +8,36 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Artists
 {
     /// <summary>
-    /// Represents a call to the basic /artists/ path.
+    /// Represents a call to the /artists/tracks path.
     /// </summary>
-    public sealed class ArtistsCall : CallInformation<BasicArtist[]>
+    public sealed class ArtistTracksCall : CallInformation<TracksArtist[]>
     {
         #region Parameters
+
+        /// <summary>
+        /// Gets or sets the album_datebetween parameter.
+        /// </summary>
+        public AlbumDateBetweenParameter AlbumDateBetween { get; set; }
+
+        /// <summary>
+        /// Gets or sets the album_id parameter.
+        /// </summary>
+        public AlbumIdParameter AlbumId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the album_name parameter.
+        /// </summary>
+        public AlbumNameParameter AlbumName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the audiodlformat parameter.
+        /// </summary>
+        public AudioDownloadFormatParameter AudioDownloadFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the audioformat parameter.
+        /// </summary>
+        public AudioFormatParameter AudioFormat { get; set; }
 
         /// <summary>
         /// Gets or sets the datebetween parameter.
@@ -30,6 +55,11 @@ namespace JamendoApi.ApiCalls.Artists
         /// Gets or sets the id parameter.
         /// </summary>
         public IdParameter Ids { get; set; }
+
+        /// <summary>
+        /// Gets or sets the imagesize parameter.
+        /// </summary>
+        public CoverImageSizeParameter ImageSize { get; set; }
 
         /// <summary>
         /// Gets or sets the limit parameter.
@@ -56,12 +86,42 @@ namespace JamendoApi.ApiCalls.Artists
         /// </summary>
         public OrderParameter<ArtistOrder> Order { get; set; }
 
+        /// <summary>
+        /// Gets or sets the track_id parameter.
+        /// </summary>
+        public TrackIdParameter TrackIds { get; set; }
+
+        /// <summary>
+        /// Gets or sets the track_name parameter.
+        /// </summary>
+        public TrackNameParameter TrackName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the track_type parameter.
+        /// </summary>
+        public TrackTypeParameter TrackType { get; set; } = new TrackTypeParameter();
+
         #endregion Parameters
 
         public override IEnumerable<Parameter> Parameters
         {
             get
             {
+                if (AlbumDateBetween != null)
+                    yield return AlbumDateBetween;
+
+                if (AlbumId != null)
+                    yield return AlbumId;
+
+                if (AlbumName != null)
+                    yield return AlbumName;
+
+                if (AudioDownloadFormat != null)
+                    yield return AudioDownloadFormat;
+
+                if (AudioFormat != null)
+                    yield return AudioFormat;
+
                 if (DateBetween != null)
                     yield return DateBetween;
 
@@ -70,6 +130,9 @@ namespace JamendoApi.ApiCalls.Artists
 
                 if (Ids != null)
                     yield return Ids;
+
+                if (ImageSize != null)
+                    yield return ImageSize;
 
                 if (Limit != null)
                     yield return Limit;
@@ -85,12 +148,21 @@ namespace JamendoApi.ApiCalls.Artists
 
                 if (Order != null)
                     yield return Order;
+
+                if (TrackIds != null)
+                    yield return TrackIds;
+
+                if (TrackName != null)
+                    yield return TrackName;
+
+                if (TrackType != null)
+                    yield return TrackType;
             }
         }
 
         public override string Path
         {
-            get { return "/artists"; }
+            get { return "/artists/tracks"; }
         }
 
         public enum ArtistOrder
@@ -111,7 +183,16 @@ namespace JamendoApi.ApiCalls.Artists
             PopularityMonth,
 
             [ApiName("popularity_week")]
-            PopularityWeek
+            PopularityWeek,
+
+            [ApiName("track_name")]
+            TrackName,
+
+            [ApiName("track_id")]
+            TrackId,
+
+            [ApiName("track_releasedate")]
+            TrackReleaseDate
         }
     }
 }
