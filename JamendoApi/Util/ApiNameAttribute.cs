@@ -15,7 +15,7 @@ namespace JamendoApi.Util
 
             if (!names.ContainsKey(fieldInfo))
             {
-                var name = fieldInfo.GetCustomAttribute<ApiNameAttribute>(false)?.Name ?? "";
+                var name = fieldInfo.GetCustomAttribute<ApiNameAttribute>(false)?.Name ?? enumValue.ToString();
                 names.Add(fieldInfo, name);
             }
 

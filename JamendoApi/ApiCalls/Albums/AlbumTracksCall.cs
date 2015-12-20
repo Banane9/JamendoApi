@@ -8,9 +8,9 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Albums
 {
     /// <summary>
-    /// Represents a call to the basic /albums/ path.
+    /// Represents a call to the /albums/tracks path.
     /// </summary>
-    public sealed class AlbumsCall : CallInformation<BasicAlbum[]>
+    public sealed class AlbumTracksCall : CallInformation<TracksAlbum[]>
     {
         #region Parameters
 
@@ -23,6 +23,16 @@ namespace JamendoApi.ApiCalls.Albums
         /// Gets or sets the artist_name parameter.
         /// </summary>
         public ArtistNameParameter ArtistName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the audiodlformat parameter.
+        /// </summary>
+        public AudioDownloadFormatParameter AudioDownloadFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the audioformat parameter.
+        /// </summary>
+        public AudioFormatParameter AudioFormat { get; set; }
 
         /// <summary>
         /// Gets or sets the datebetween parameter.
@@ -62,12 +72,17 @@ namespace JamendoApi.ApiCalls.Albums
         /// <summary>
         /// Gets or sets the order parameter.
         /// </summary>
-        public OrderParameter<AlbumsOrder> Order { get; set; }
+        public OrderParameter<AlbumTracksOrder> Order { get; set; }
 
         /// <summary>
-        /// Gets or sets the audioformat parameter.
+        /// Gets or sets the track_id parameter.
         /// </summary>
-        public ZipAudioFormatParameter ZipAudioFormat { get; set; }
+        public TrackIdParameter TrackIds { get; set; }
+
+        /// <summary>
+        /// Gets or sets the track_name parameter.
+        /// </summary>
+        public TrackNameParameter TrackName { get; set; }
 
         #endregion Parameters
 
@@ -80,6 +95,12 @@ namespace JamendoApi.ApiCalls.Albums
 
                 if (ArtistName != null)
                     yield return ArtistName;
+
+                if (AudioDownloadFormat != null)
+                    yield return AudioDownloadFormat;
+
+                if (AudioFormat != null)
+                    yield return AudioFormat;
 
                 if (DateBetween != null)
                     yield return DateBetween;
@@ -105,17 +126,20 @@ namespace JamendoApi.ApiCalls.Albums
                 if (Order != null)
                     yield return Offset;
 
-                if (ZipAudioFormat != null)
-                    yield return ZipAudioFormat;
+                if (TrackIds != null)
+                    yield return TrackIds;
+
+                if (TrackName != null)
+                    yield return TrackName;
             }
         }
 
         public override string Path
         {
-            get { return "/albums"; }
+            get { return "/albums/tracks"; }
         }
 
-        public enum AlbumsOrder
+        public enum AlbumTracksOrder
         {
             [ApiName("name")]
             Name,
@@ -139,7 +163,16 @@ namespace JamendoApi.ApiCalls.Albums
             PopularityMonth,
 
             [ApiName("popularity_week")]
-            PopularityWeek
+            PopularityWeek,
+
+            [ApiName("track_id")]
+            TrackId,
+
+            [ApiName("track_name")]
+            TrackName,
+
+            [ApiName("track_position")]
+            TrackPosition
         }
     }
 }
