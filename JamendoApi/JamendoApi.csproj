@@ -41,6 +41,7 @@
     <Compile Include="ApiCalls\CallInformation.cs" />
     <Compile Include="ApiCalls\Parameter.cs" />
     <Compile Include="ApiCalls\Parameters\ArtistIdParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\OrderParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ZipAudioformatParameter.cs" />
     <Compile Include="ApiCalls\Parameters\CoverImageSizeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\DateBetweenParameter.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ApiNameAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
