@@ -16,6 +16,8 @@ namespace JamendoApi.ApiCalls.Artists
 
         /// <summary>
         /// Gets or sets the album_datebetween parameter.
+        /// <para/>
+        /// Filters the tracks based on their / their album's release date.
         /// </summary>
         public AlbumDateBetweenParameter AlbumDateBetween { get; set; }
 

@@ -64,7 +64,7 @@ namespace JamendoApi.ApiCalls.Albums
         /// <summary>
         /// Gets or sets the order parameter.
         /// </summary>
-        public OrderParameter<AlbumsOrder> Order { get; set; }
+        public OrderParameter<AlbumOrder> Order { get; set; }
 
         /// <summary>
         /// Gets or sets the audioformat parameter.
@@ -117,7 +117,7 @@ namespace JamendoApi.ApiCalls.Albums
             get { return "/albums"; }
         }
 
-        public enum AlbumsOrder
+        public enum AlbumOrder
         {
             [ApiName("name")]
             Name,

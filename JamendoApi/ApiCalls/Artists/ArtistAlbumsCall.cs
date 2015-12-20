@@ -1,45 +1,47 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Albums;
+using JamendoApi.ApiParts.Artists;
 using JamendoApi.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JamendoApi.ApiCalls.Albums
+namespace JamendoApi.ApiCalls.Artists
 {
     /// <summary>
-    /// Represents a call to the /albums/tracks path.
+    /// Represents a call to the /artists/albums path.
     /// </summary>
-    public sealed class AlbumTracksCall : CallInformation<TracksAlbum[]>
+    public sealed class ArtistAlbumsCall : CallInformation<TracksArtist[]>
     {
         #region Parameters
 
         /// <summary>
-        /// Gets or sets the artist_id parameter.
+        /// Gets or sets the album_datebetween parameter.
+        /// <para/>
+        /// Filters the albums based on their release date.
         /// </summary>
-        public ArtistIdParameter ArtistId { get; set; }
+        public AlbumDateBetweenParameter AlbumDateBetween { get; set; }
 
         /// <summary>
-        /// Gets or sets the artist_name parameter.
+        /// Gets or sets the album_id parameter.
         /// </summary>
-        public ArtistNameParameter ArtistName { get; set; }
+        public AlbumIdParameter AlbumId { get; set; }
 
         /// <summary>
-        /// Gets or sets the audiodlformat parameter.
+        /// Gets or sets the album_name parameter.
         /// </summary>
-        public AudioDownloadFormatParameter AudioDownloadFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the audioformat parameter.
-        /// </summary>
-        public AudioFormatParameter AudioFormat { get; set; }
+        public AlbumNameParameter AlbumName { get; set; }
 
         /// <summary>
         /// Gets or sets the datebetween parameter.
         /// <para/>
-        /// Filters albums based on their release date.
+        /// Filters artists based on their join date.
         /// </summary>
         public DateBetweenParameter DateBetween { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hasimage parameter.
+        /// </summary>
+        public HasImageParameter HasImage { get; set; }
 
         /// <summary>
         /// Gets or sets the id parameter.
@@ -67,24 +69,14 @@ namespace JamendoApi.ApiCalls.Albums
         public NamesearchParameter Namesearch { get; set; }
 
         /// <summary>
-        /// Gets or sets the offset parameter.
+        /// Gets or sets the offset parameter-
         /// </summary>
         public OffsetParameter Offset { get; set; }
 
         /// <summary>
         /// Gets or sets the order parameter.
         /// </summary>
-        public OrderParameter<AlbumOrder> Order { get; set; }
-
-        /// <summary>
-        /// Gets or sets the track_id parameter.
-        /// </summary>
-        public TrackIdParameter TrackIds { get; set; }
-
-        /// <summary>
-        /// Gets or sets the track_name parameter.
-        /// </summary>
-        public TrackNameParameter TrackName { get; set; }
+        public OrderParameter<ArtistOrder> Order { get; set; }
 
         #endregion Parameters
 
@@ -92,20 +84,20 @@ namespace JamendoApi.ApiCalls.Albums
         {
             get
             {
-                if (ArtistId != null)
-                    yield return ArtistId;
+                if (AlbumDateBetween != null)
+                    yield return AlbumDateBetween;
 
-                if (ArtistName != null)
-                    yield return ArtistName;
+                if (AlbumId != null)
+                    yield return AlbumId;
 
-                if (AudioDownloadFormat != null)
-                    yield return AudioDownloadFormat;
-
-                if (AudioFormat != null)
-                    yield return AudioFormat;
+                if (AlbumName != null)
+                    yield return AlbumName;
 
                 if (DateBetween != null)
                     yield return DateBetween;
+
+                if (HasImage != null)
+                    yield return HasImage;
 
                 if (Ids != null)
                     yield return Ids;
@@ -126,22 +118,16 @@ namespace JamendoApi.ApiCalls.Albums
                     yield return Offset;
 
                 if (Order != null)
-                    yield return Offset;
-
-                if (TrackIds != null)
-                    yield return TrackIds;
-
-                if (TrackName != null)
-                    yield return TrackName;
+                    yield return Order;
             }
         }
 
         public override string Path
         {
-            get { return "/albums/tracks"; }
+            get { return "/artists/albums"; }
         }
 
-        public enum AlbumOrder
+        public enum ArtistOrder
         {
             [ApiName("name")]
             Name,
@@ -149,14 +135,8 @@ namespace JamendoApi.ApiCalls.Albums
             [ApiName("id")]
             Id,
 
-            [ApiName("releasedate")]
-            ReleaseDate,
-
-            [ApiName("artist_id")]
-            ArtistId,
-
-            [ApiName("artist_name")]
-            ArtistName,
+            [ApiName("joindate")]
+            JoinDate,
 
             [ApiName("popularity_total")]
             PopularityTotal,
@@ -167,14 +147,14 @@ namespace JamendoApi.ApiCalls.Albums
             [ApiName("popularity_week")]
             PopularityWeek,
 
-            [ApiName("track_id")]
-            TrackId,
+            [ApiName("album_name")]
+            AlbumName,
 
-            [ApiName("track_name")]
-            TrackName,
+            [ApiName("album_id")]
+            AlbumId,
 
-            [ApiName("track_position")]
-            TrackPosition
+            [ApiName("album_releasedate")]
+            AlbumReleaseDate
         }
     }
 }
