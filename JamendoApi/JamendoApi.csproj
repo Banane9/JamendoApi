@@ -40,11 +40,13 @@
     <Compile Include="ApiCalls\Albums\AlbumMusicInfoCall.cs" />
     <Compile Include="ApiCalls\Albums\AlbumsCall.cs" />
     <Compile Include="ApiCalls\Albums\AlbumTracksCall.cs" />
+    <Compile Include="ApiCalls\Artists\ArtistsCall.cs" />
     <Compile Include="ApiCalls\CallInformation.cs" />
     <Compile Include="ApiCalls\Parameter.cs" />
     <Compile Include="ApiCalls\Parameters\ArtistIdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\AudioDownloadFormatParameter.cs" />
     <Compile Include="ApiCalls\Parameters\AudioFormatParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\HasImageParameter.cs" />
     <Compile Include="ApiCalls\Parameters\OrderParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TagParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TrackIdParameter.cs" />

@@ -23,6 +23,8 @@ namespace JamendoApi.ApiCalls.Albums
 
         /// <summary>
         /// Gets or sets the datebetween parameter.
+        /// <para/>
+        /// Filters albums based on their release date.
         /// </summary>
         public DateBetweenParameter DateBetween { get; set; }
 
