@@ -5,7 +5,7 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Parameters
 {
     /// <summary>
-    /// Represents the imagesize parameter which is part of calls relating to albums and tracks.
+    /// Represents the imagesize parameter which is present in calls relating to albums and tracks.
     /// </summary>
     public sealed class CoverImageSizeParameter : Parameter<CoverImageSizeParameter, CoverImageSizeParameter.Size>
     {

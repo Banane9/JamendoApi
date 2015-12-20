@@ -40,7 +40,15 @@
     <Compile Include="ApiCalls\Albums\AlbumsCall.cs" />
     <Compile Include="ApiCalls\CallInformation.cs" />
     <Compile Include="ApiCalls\Parameter.cs" />
+    <Compile Include="ApiCalls\Parameters\ArtistIdParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\ZipAudioformatParameter.cs" />
     <Compile Include="ApiCalls\Parameters\CoverImageSizeParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\DateBetweenParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\IdParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\LimitParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\ArtistNameParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\NameParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\NamesearchParameter.cs" />
     <Compile Include="ApiCalls\Parameters\OffsetParameter.cs" />
     <Compile Include="ApiParts\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiParts\Albums\BasicAlbum.cs" />

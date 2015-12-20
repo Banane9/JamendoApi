@@ -38,6 +38,11 @@ namespace JamendoApi.ApiCalls
         {
             return parameter.Value;
         }
+
+        protected override string getValueString()
+        {
+            return Value.ToString();
+        }
     }
 
     /// <summary>

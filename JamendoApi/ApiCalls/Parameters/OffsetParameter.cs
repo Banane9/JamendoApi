@@ -5,7 +5,7 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Parameters
 {
     /// <summary>
-    /// Represents the offset parameter which is part of nearly all calls.
+    /// Represents the offset parameter which is present in nearly all calls.
     /// </summary>
     public sealed class OffsetParameter : Parameter<OffsetParameter, uint>
     {
@@ -21,10 +21,5 @@ namespace JamendoApi.ApiCalls.Parameters
         public OffsetParameter(uint value)
             : base(value)
         { }
-
-        protected override string getValueString()
-        {
-            return Value.ToString();
-        }
     }
 }
