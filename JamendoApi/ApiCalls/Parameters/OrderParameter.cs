@@ -35,6 +35,9 @@ namespace JamendoApi.ApiCalls.Parameters
         }
     }
 
+    /// <summary>
+    /// Lists the possible values for the sort order.
+    /// </summary>
     public enum SortOrder
     {
         [ApiName("desc")]

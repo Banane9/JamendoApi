@@ -1,4 +1,6 @@
-﻿using JamendoApi.ApiParts.Albums;
+﻿using JamendoApi.ApiCalls.Albums;
+using JamendoApi.ApiCalls.Parameters;
+using JamendoApi.ApiParts.Albums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
@@ -18,6 +20,24 @@ namespace JamendoApi.Tests
         {
             var response = deserializer.Deserialize<JamendoApiResponse<BasicAlbum[]>>(new JsonTextReader(new StringReader(
                 "{\"headers\":{\"status\":\"success\",\"code\":0,\"error_message\":\"\",\"warnings\":\"\",\"results_count\":1},\"results\":[{\"id\":\"24\",\"name\":\"Premiers Jets\",\"releasedate\":\"2004 - 12 - 17\",\"artist_id\":\"7\",\"artist_name\":\"TriFace\",\"image\":\"https:\\/\\/imgjam1.jamendo.com\\/albums\\/s0\\/24\\/covers\\/1.200.jpg\",\"zip\":\"https:\\/\\/mp3d.jamendo.com\\/download\\/a24\\/mp32\\/\",\"shorturl\":\"http:\\/\\/jamen.do\\/l\\/a24\",\"shareurl\":\"http:\\/\\/www.jamendo.com\\/list\\/a24\"}]}")));
+
+            var result = response.Results[0];
+            Assert.AreEqual(24u, result.Id);
+            Assert.AreEqual("Premiers Jets", result.Name);
+            Assert.AreEqual(new DateTime(2004, 12, 17), result.ReleaseDate);
+            Assert.AreEqual(7u, result.ArtistId);
+            Assert.AreEqual("TriFace", result.ArtistName);
+            Assert.AreEqual("https://imgjam1.jamendo.com/albums/s0/24/covers/1.200.jpg", result.Image);
+            Assert.AreEqual("https://mp3d.jamendo.com/download/a24/mp32/", result.Zip);
+            Assert.AreEqual("http://jamen.do/l/a24", result.ShortUrl);
+            Assert.AreEqual("http://www.jamendo.com/list/a24", result.ShareUrl);
+        }
+
+        [TestMethod]
+        public void BasicAlbumsCallSuccessful()
+        {
+            var client = new JamendoApiClient("9d9f42e3");
+            var response = client.Call(new AlbumsCall { Ids = new IdParameter(24u) }).Result;
 
             var result = response.Results[0];
             Assert.AreEqual(24u, result.Id);

@@ -9,6 +9,9 @@ namespace JamendoApi.ApiCalls.Parameters
     /// </summary>
     public sealed class LimitParameter : Parameter<LimitParameter, uint>
     {
+        public const uint MaxLimit = 200;
+        public const uint MinLimit = 1;
+
         public override string Name
         {
             get { return "limit"; }
@@ -19,7 +22,7 @@ namespace JamendoApi.ApiCalls.Parameters
         { }
 
         public LimitParameter(uint limit)
-            : base(Math.Max(1, Math.Max(200, limit)))
+            : base(Math.Max(MinLimit, Math.Min(MaxLimit, limit)))
         { }
     }
 }

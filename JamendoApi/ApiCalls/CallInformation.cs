@@ -24,14 +24,15 @@ namespace JamendoApi.ApiCalls
         /// Generates the call's query string.
         /// </summary>
         /// <returns>The query string for the call.</returns>
-        public string GetQueryString()
+        public string GetQueryString(string clientId, string format)
         {
-            return Path + "?" + string.Join("&", Parameters.Select(parameter => parameter.GetParameterString()));
+            return Path + "?client_id=" + clientId + "&format=" + format + "&"
+                + string.Join("&", Parameters.Select(parameter => parameter.GetParameterString()));
         }
 
         public override string ToString()
         {
-            return GetQueryString();
+            return Path + "?" + string.Join("&", Parameters.Select(parameter => parameter.GetParameterString()));
         }
     }
 }
