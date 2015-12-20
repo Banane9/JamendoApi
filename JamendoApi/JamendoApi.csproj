@@ -37,6 +37,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiCalls\Albums\AlbumMusicInfoCall.cs" />
     <Compile Include="ApiCalls\Albums\AlbumsCall.cs" />
     <Compile Include="ApiCalls\Albums\AlbumTracksCall.cs" />
     <Compile Include="ApiCalls\CallInformation.cs" />
@@ -45,6 +46,7 @@
     <Compile Include="ApiCalls\Parameters\AudioDownloadFormatParameter.cs" />
     <Compile Include="ApiCalls\Parameters\AudioFormatParameter.cs" />
     <Compile Include="ApiCalls\Parameters\OrderParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\TagParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TrackIdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TrackNameParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ZipAudioFormatParameter.cs" />
