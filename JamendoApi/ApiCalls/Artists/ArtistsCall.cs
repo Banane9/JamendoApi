@@ -62,29 +62,14 @@ namespace JamendoApi.ApiCalls.Artists
         {
             get
             {
-                if (DateBetween != null)
-                    yield return DateBetween;
-
-                if (HasImage != null)
-                    yield return HasImage;
-
-                if (Ids != null)
-                    yield return Ids;
-
-                if (Limit != null)
-                    yield return Limit;
-
-                if (Name != null)
-                    yield return Name;
-
-                if (Namesearch != null)
-                    yield return Namesearch;
-
-                if (Offset != null)
-                    yield return Offset;
-
-                if (Order != null)
-                    yield return Order;
+                yield return DateBetween;
+                yield return HasImage;
+                yield return Ids;
+                yield return Limit;
+                yield return Name;
+                yield return Namesearch;
+                yield return Offset;
+                yield return Order;
             }
         }
 

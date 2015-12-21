@@ -76,41 +76,18 @@ namespace JamendoApi.ApiCalls.Albums
         {
             get
             {
-                if (ArtistId != null)
-                    yield return ArtistId;
-
-                if (ArtistName != null)
-                    yield return ArtistName;
-
-                if (DateBetween != null)
-                    yield return DateBetween;
-
-                if (Ids != null)
-                    yield return Ids;
-
-                if (ImageSize != null)
-                    yield return ImageSize;
-
-                if (Limit != null)
-                    yield return Limit;
-
-                if (Name != null)
-                    yield return Name;
-
-                if (Namesearch != null)
-                    yield return Namesearch;
-
-                if (Offset != null)
-                    yield return Offset;
-
-                if (Order != null)
-                    yield return Offset;
-
-                if (Tag != null)
-                    yield return Tag;
-
-                if (ZipAudioFormat != null)
-                    yield return ZipAudioFormat;
+                yield return ArtistId;
+                yield return ArtistName;
+                yield return DateBetween;
+                yield return Ids;
+                yield return ImageSize;
+                yield return Limit;
+                yield return Name;
+                yield return Namesearch;
+                yield return Offset;
+                yield return Offset;
+                yield return Tag;
+                yield return ZipAudioFormat;
             }
         }
 

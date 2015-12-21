@@ -109,56 +109,23 @@ namespace JamendoApi.ApiCalls.Artists
         {
             get
             {
-                if (AlbumDateBetween != null)
-                    yield return AlbumDateBetween;
-
-                if (AlbumId != null)
-                    yield return AlbumId;
-
-                if (AlbumName != null)
-                    yield return AlbumName;
-
-                if (AudioDownloadFormat != null)
-                    yield return AudioDownloadFormat;
-
-                if (AudioFormat != null)
-                    yield return AudioFormat;
-
-                if (DateBetween != null)
-                    yield return DateBetween;
-
-                if (HasImage != null)
-                    yield return HasImage;
-
-                if (Ids != null)
-                    yield return Ids;
-
-                if (ImageSize != null)
-                    yield return ImageSize;
-
-                if (Limit != null)
-                    yield return Limit;
-
-                if (Name != null)
-                    yield return Name;
-
-                if (Namesearch != null)
-                    yield return Namesearch;
-
-                if (Offset != null)
-                    yield return Offset;
-
-                if (Order != null)
-                    yield return Order;
-
-                if (TrackIds != null)
-                    yield return TrackIds;
-
-                if (TrackName != null)
-                    yield return TrackName;
-
-                if (TrackType != null)
-                    yield return TrackType;
+                yield return AlbumDateBetween;
+                yield return AlbumId;
+                yield return AlbumName;
+                yield return AudioDownloadFormat;
+                yield return AudioFormat;
+                yield return DateBetween;
+                yield return HasImage;
+                yield return Ids;
+                yield return ImageSize;
+                yield return Limit;
+                yield return Name;
+                yield return Namesearch;
+                yield return Offset;
+                yield return Order;
+                yield return TrackIds;
+                yield return TrackName;
+                yield return TrackType;
             }
         }
 

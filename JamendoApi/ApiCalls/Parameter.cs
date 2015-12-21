@@ -41,7 +41,7 @@ namespace JamendoApi.ApiCalls
 
         protected override string getValueString()
         {
-            return Value.ToString();
+            return Value?.ToString() ?? "";
         }
     }
 

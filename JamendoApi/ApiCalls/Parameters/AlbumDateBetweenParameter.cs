@@ -25,10 +25,5 @@ namespace JamendoApi.ApiCalls.Parameters
         public AlbumDateBetweenParameter(DateTime start, DateTime end)
             : base(new DateBetween(start, end))
         { }
-
-        protected override string getValueString()
-        {
-            return Value.ToString();
-        }
     }
 }

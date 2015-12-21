@@ -11,7 +11,7 @@ namespace JamendoApi.ApiCalls
     public abstract class CallInformation<TResult>
     {
         /// <summary>
-        /// Gets the not-null parameters.
+        /// Gets all parameters.
         /// </summary>
         public abstract IEnumerable<Parameter> Parameters { get; }
 
@@ -32,7 +32,8 @@ namespace JamendoApi.ApiCalls
 
         public override string ToString()
         {
-            return Path + "?" + string.Join("&", Parameters.Select(parameter => parameter.GetParameterString()));
+            return Path + "?" + string.Join("&",
+                Parameters.Where(parameter => parameter != null).Select(parameter => parameter.GetParameterString()));
         }
     }
 }
