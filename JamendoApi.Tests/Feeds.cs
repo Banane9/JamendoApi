@@ -1,4 +1,5 @@
 ﻿using JamendoApi.ApiParts.Feeds;
+using JamendoApi.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
@@ -20,15 +21,15 @@ namespace JamendoApi.Tests
 
             var result = response.Results[0];
             Assert.AreEqual(328u, result.Id);
-            Assert.AreEqual("The best of 2015... so far!", result.Title["en"]);
-            Assert.AreEqual("Das Beste aus 2015 ... zumindest bis jetzt!", result.Title["de"]);
+            Assert.AreEqual("The best of 2015... so far!", result.Title[Language.English]);
+            Assert.AreEqual("Das Beste aus 2015 ... zumindest bis jetzt!", result.Title[Language.German]);
             Assert.AreEqual("https://www.jamendo.com/list/p500117138", result.Link);
             Assert.AreEqual(8u, result.Position);
-            Assert.IsTrue(result.AvailableLanguages.All(lang => lang == "de" || lang == "en"));
+            Assert.IsTrue(result.AvailableLanguages.All(lang => lang == Language.German || lang == Language.English));
             Assert.AreEqual(new DateTime(2015, 10, 12), result.StartDate);
             Assert.AreEqual(new DateTime(2200, 1, 1), result.EndDate);
-            Assert.AreEqual("2015 is not only a year of change for Jamendo, it's also a pretty awesome year of music! Discover the coolest 2015 songs we got, so far!\t\t\r\n\r\n\r\n\r\n\r\n\r\n", result.Text["en"]);
-            Assert.AreEqual("2015 bedeutet nicht nur große Veränderungen für Jamendo, 2015 ist auch ein Jahr voll großartiger Musik! Entdecke unsere bislang coolsten Songs für 2015!", result.Text["de"]);
+            Assert.AreEqual("2015 is not only a year of change for Jamendo, it's also a pretty awesome year of music! Discover the coolest 2015 songs we got, so far!\t\t\r\n\r\n\r\n\r\n\r\n\r\n", result.Text[Language.English]);
+            Assert.AreEqual("2015 bedeutet nicht nur große Veränderungen für Jamendo, 2015 ist auch ein Jahr voll großartiger Musik! Entdecke unsere bislang coolsten Songs für 2015!", result.Text[Language.German]);
             Assert.AreEqual(BasicFeed.FeedType.Playlist, result.Type);
             Assert.AreEqual(500117138u, result.TargetId);
             Assert.AreEqual(BasicFeed.UserStatus.All, result.TargetUsers);

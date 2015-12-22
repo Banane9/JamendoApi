@@ -1,8 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using JamendoApi.Common;
+using JamendoApi.Util;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.Serialization;
 
 namespace JamendoApi.ApiParts.Feeds
 {
@@ -14,13 +18,28 @@ namespace JamendoApi.ApiParts.Feeds
     [JsonObject]
     public sealed class BasicFeed
     {
+        private static readonly Dictionary<string, Language> languages =
+                    Enum.GetValues(typeof(Language)).Cast<Language>().ToDictionary(value => value.GetName());
+
+        [JsonProperty(PropertyName = "lang", Required = Required.Always)]
+        private string[] availableLanguages;
+
+        // Todo: Make sure it works even when there's an array, if jamendo doesn't change it
+        [JsonProperty(PropertyName = "subtitle", Required = Required.Always)]
+        private Dictionary<string, string> subtitle;
+
+        [JsonProperty(PropertyName = "text", Required = Required.Always)]
+        private Dictionary<string, string> text;
+
+        private Dictionary<string, string> title;
+
         /// <summary>
         /// Gets the languages that the feed was translated to (as two-letter codes).
         /// <para/>
         /// Title, Subtitle and Text fields will contain empty values for language codes not listed here.
         /// </summary>
-        [JsonProperty(PropertyName = "lang", Required = Required.Always)]
-        public string[] AvailableLanguages { get; private set; }
+        [JsonIgnore]
+        public Language[] AvailableLanguages { get; private set; }
 
         /// <summary>
         /// Gets the date at which the feed will become inactive.
@@ -66,9 +85,8 @@ namespace JamendoApi.ApiParts.Feeds
         /// <para/>
         /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
-        // Todo: Make sure it works even when there's an array, if jamendo doesn't change it
-        [JsonProperty(PropertyName = "subtitle", Required = Required.Always)]
-        public Dictionary<string, string> Subtitle { get; private set; }
+        [JsonIgnore]
+        public ReadOnlyDictionary<Language, string> Subtitle { get; private set; }
 
         /// <summary>
         /// Gets the Id of the feed's target entity. 0 if the feed doesn't have a target entity.
@@ -89,8 +107,8 @@ namespace JamendoApi.ApiParts.Feeds
         /// <para/>
         /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
-        [JsonProperty(PropertyName = "text", Required = Required.Always)]
-        public Dictionary<string, string> Text { get; private set; }
+        [JsonIgnore]
+        public ReadOnlyDictionary<Language, string> Text { get; private set; }
 
         /// <summary>
         /// Gets the different titles connected to their two-letter language code.
@@ -98,7 +116,7 @@ namespace JamendoApi.ApiParts.Feeds
         /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
         [JsonProperty(PropertyName = "title", Required = Required.Always)]
-        public Dictionary<string, string> Title { get; private set; }
+        public ReadOnlyDictionary<Language, string> Title { get; private set; }
 
         /// <summary>
         /// Gets the type (artist, album, etc.) of the feed. Defines whether it has a target entity or not.
@@ -106,6 +124,21 @@ namespace JamendoApi.ApiParts.Feeds
         [JsonProperty(PropertyName = "type", Required = Required.Always)]
         [JsonConverter(typeof(StringEnumConverter))]
         public FeedType Type { get; private set; }
+
+        [OnDeserialized]
+        private void onDeserialized(StreamingContext _)
+        {
+            AvailableLanguages = availableLanguages.Select(code => languages[code]).ToArray();
+
+            Title = new ReadOnlyDictionary<Language, string>(
+                title.ToDictionary(title => languages[title.Key], title => title.Value));
+
+            Subtitle = new ReadOnlyDictionary<Language, string>(
+                subtitle.ToDictionary(subtitle => languages[subtitle.Key], subtitle => subtitle.Value));
+
+            Text = new ReadOnlyDictionary<Language, string>(
+                text.ToDictionary(text => languages[text.Key], text => text.Value));
+        }
 
         /// <summary>
         /// Represents the images object that's part of the feed result.
@@ -135,46 +168,6 @@ namespace JamendoApi.ApiParts.Feeds
             /// </summary>
             [JsonProperty(PropertyName = "size996_350", Required = Required.Always)]
             public string Size996x350 { get; private set; }
-        }
-
-        /// <summary>
-        /// Lists the possible values for the type field.
-        /// </summary>
-        public enum FeedType
-        {
-            Album,
-            Artist,
-            Playlist,
-            Track,
-            News,
-            Interview,
-            Contest,
-            Video,
-            Update
-        }
-
-        /// <summary>
-        /// Lists the possible values for the target users field.
-        /// <para/>
-        /// NotLogged and Logged aren't mutually exclusive.
-        /// </summary>
-        [Flags]
-        public enum UserStatus
-        {
-            /// <summary>
-            /// Targets users that aren't logged in.
-            /// </summary>
-            NotLogged = 1,
-
-            /// <summary>
-            /// Targets users that are logged in.
-            /// </summary>
-            Logged = 2,
-
-            /// <summary>
-            /// Targets all users.
-            /// </summary>
-            All = NotLogged | Logged
         }
     }
 }

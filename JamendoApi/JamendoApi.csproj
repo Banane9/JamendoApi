@@ -47,6 +47,7 @@
     <Compile Include="ApiCalls\Artists\ArtistTracksCall.cs" />
     <Compile Include="ApiCalls\Autocomplete\AutocompleteCall.cs" />
     <Compile Include="ApiCalls\CallInformation.cs" />
+    <Compile Include="ApiCalls\Feeds\FeedsCall.cs" />
     <Compile Include="ApiCalls\Parameter.cs" />
     <Compile Include="ApiCalls\Parameters\AlbumDateBetweenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ArtistIdParameter.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="ApiCalls\Parameters\AlbumIdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\AlbumNameParameter.cs" />
     <Compile Include="ApiCalls\Parameters\HasLocationParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\LanguageParameter.cs" />
     <Compile Include="ApiCalls\Parameters\LocationCityParameter.cs" />
     <Compile Include="ApiCalls\Parameters\LocationCoordinatesParameter.cs" />
     <Compile Include="ApiCalls\Parameters\LocationCountryParameter.cs" />
@@ -65,9 +67,11 @@
     <Compile Include="ApiCalls\Parameters\OrderParameter.cs" />
     <Compile Include="ApiCalls\Parameters\PrefixParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TagParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\TargetParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TrackIdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TrackNameParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TrackTypeParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\TypeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ZipAudioFormatParameter.cs" />
     <Compile Include="ApiCalls\Parameters\CoverImageSizeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\DateBetweenParameter.cs" />
@@ -103,8 +107,11 @@
     <Compile Include="ApiParts\Users\TracksUser.cs" />
     <Compile Include="Common\AcousticElectric.cs" />
     <Compile Include="Common\AutocompleteEntity.cs" />
+    <Compile Include="Common\FeedType.cs" />
     <Compile Include="Common\Gender.cs" />
+    <Compile Include="Common\Language.cs" />
     <Compile Include="Common\Tempo.cs" />
+    <Compile Include="Common\UserStatus.cs" />
     <Compile Include="Common\VocalInstrumental.cs" />
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />
