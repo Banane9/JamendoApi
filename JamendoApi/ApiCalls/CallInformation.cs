@@ -26,8 +26,8 @@ namespace JamendoApi.ApiCalls
         /// <returns>The query string for the call.</returns>
         public string GetQueryString(string clientId, string format)
         {
-            return Path + "?client_id=" + clientId + "&format=" + format + "&"
-                + string.Join("&", Parameters.Select(parameter => parameter.GetParameterString()));
+            return Path + "?client_id=" + clientId + "&format=" + format + "&" + string.Join("&",
+                Parameters.Where(parameter => parameter != null).Select(parameter => parameter.GetParameterString()));
         }
 
         public override string ToString()
