@@ -22,16 +22,19 @@ namespace JamendoApi.ApiParts.Feeds
                     Enum.GetValues(typeof(Language)).Cast<Language>().ToDictionary(value => value.GetName());
 
         [JsonProperty(PropertyName = "lang", Required = Required.Always)]
-        private string[] availableLanguages;
+        private string[] availableLanguages = null;
 
-        // Todo: Make sure it works even when there's an array, if jamendo doesn't change it
         [JsonProperty(PropertyName = "subtitle", Required = Required.Always)]
-        private Dictionary<string, string> subtitle;
+        [JsonConverter(typeof(ArrayOrObjectConverter))]
+        private Dictionary<string, string> subtitle = null;
 
         [JsonProperty(PropertyName = "text", Required = Required.Always)]
-        private Dictionary<string, string> text;
+        [JsonConverter(typeof(ArrayOrObjectConverter))]
+        private Dictionary<string, string> text = null;
 
-        private Dictionary<string, string> title;
+        [JsonProperty(PropertyName = "title", Required = Required.Always)]
+        [JsonConverter(typeof(ArrayOrObjectConverter))]
+        private Dictionary<string, string> title = null;
 
         /// <summary>
         /// Gets the languages that the feed was translated to (as two-letter codes).
@@ -115,7 +118,7 @@ namespace JamendoApi.ApiParts.Feeds
         /// <para/>
         /// Note that there are empty entries for languages not listed under AvailableLanguages.
         /// </summary>
-        [JsonProperty(PropertyName = "title", Required = Required.Always)]
+        [JsonIgnore]
         public ReadOnlyDictionary<Language, string> Title { get; private set; }
 
         /// <summary>
