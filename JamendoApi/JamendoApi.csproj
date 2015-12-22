@@ -59,6 +59,7 @@
     <Compile Include="ApiCalls\Parameters\AlbumNameParameter.cs" />
     <Compile Include="ApiCalls\Parameters\HasLocationParameter.cs" />
     <Compile Include="ApiCalls\Parameters\AccessTokenParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\PositionBetweenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\UserNameParameter.cs" />
     <Compile Include="ApiCalls\Parameters\UserIdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\LanguageParameter.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="ApiCalls\Parameters\NamesearchParameter.cs" />
     <Compile Include="ApiCalls\Parameters\OffsetParameter.cs" />
     <Compile Include="ApiCalls\Playlists\PlaylistsCall.cs" />
+    <Compile Include="ApiCalls\Playlists\PlaylistTracksCall.cs" />
     <Compile Include="ApiParts\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiParts\Albums\BasicAlbum.cs" />
     <Compile Include="ApiParts\Albums\TracksAlbum.cs" />
