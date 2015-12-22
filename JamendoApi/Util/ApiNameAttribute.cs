@@ -1,28 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace JamendoApi.Util
 {
-    internal static class OrderNameAttributeExtension
-    {
-        private static Dictionary<FieldInfo, string> names = new Dictionary<FieldInfo, string>();
-
-        public static string GetName(this Enum enumValue)
-        {
-            var fieldInfo = enumValue.GetType().GetRuntimeField(enumValue.ToString());
-
-            if (!names.ContainsKey(fieldInfo))
-            {
-                var name = fieldInfo.GetCustomAttribute<ApiNameAttribute>(false)?.Name ?? enumValue.ToString();
-                names.Add(fieldInfo, name);
-            }
-
-            return names[fieldInfo];
-        }
-    }
-
     /// <summary>
     /// Put on the fields of enums to specify the name in the API.
     /// </summary>

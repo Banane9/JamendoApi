@@ -23,6 +23,14 @@ namespace JamendoApi.ApiCalls.Parameters
             : base(type)
         { }
 
+        protected override string getValueString()
+        {
+            return string.Join("+", Value.GetFlagValues().Select(value => value.GetName()));
+        }
+
+        /// <summary>
+        /// Lists the possible values for the track type.
+        /// </summary>
         public enum TrackType
         {
             [ApiName("albumtrack")]
@@ -31,7 +39,6 @@ namespace JamendoApi.ApiCalls.Parameters
             [ApiName("single")]
             Single = 2,
 
-            [ApiName("albumtrack+single")]
             All = Albumtrack | Single
         }
     }

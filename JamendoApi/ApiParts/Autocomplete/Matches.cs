@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using JamendoApi.Common;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace JamendoApi.ApiParts.Autocomplete
     /// Documented here: https://developer.jamendo.com/v3.0/autocomplete
     /// </summary>
     [JsonDictionary]
-    public sealed class Matches : Dictionary<Matches.Entity, Matches.Match[]>
+    public sealed class Matches : Dictionary<AutocompleteEntity, Matches.Match[]>
     {
         /// <summary>
         /// Represents the match object that's part of the match collection.
@@ -30,17 +31,6 @@ namespace JamendoApi.ApiParts.Autocomplete
             /// </summary>
             [JsonProperty(PropertyName = "count", Required = Required.Always)]
             public uint Count { get; private set; }
-        }
-
-        /// <summary>
-        /// Lists the possible values for the entity keys.
-        /// </summary>
-        public enum Entity
-        {
-            Tags,
-            Artists,
-            Tracks,
-            Albums
         }
     }
 }
