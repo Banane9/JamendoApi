@@ -8,9 +8,9 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Artists
 {
     /// <summary>
-    /// Represents a call to the /artists/locations path.
+    /// Represents a call to the /artists/musicinfo path.
     /// </summary>
-    public sealed class ArtistLocationsCall : CallInformation<LocationsArtist[]>
+    public sealed class ArtistMusicInfoCall : CallInformation<BasicArtist[]>
     {
         #region Parameters
 
@@ -27,11 +27,6 @@ namespace JamendoApi.ApiCalls.Artists
         public HasImageParameter HasImage { get; set; }
 
         /// <summary>
-        /// Gets or sets the haslocation parameter.
-        /// </summary>
-        public HasLocationParameter HasLocation { get; set; }
-
-        /// <summary>
         /// Gets or sets the id parameter.
         /// </summary>
         public IdParameter Ids { get; set; }
@@ -40,21 +35,6 @@ namespace JamendoApi.ApiCalls.Artists
         /// Gets or sets the limit parameter.
         /// </summary>
         public LimitParameter Limit { get; set; }
-
-        /// <summary>
-        /// Gets or sets the location_city parameter.
-        /// </summary>
-        public LocationCityParameter LocationCity { get; set; }
-
-        /// <summary>
-        /// Gets or sets the location_coords parameter.
-        /// </summary>
-        public LocationCoordinatesParameter LocationCoordinates { get; set; }
-
-        /// <summary>
-        /// Gets or sets the location_radius parameter.
-        /// </summary>
-        public LocationRadiusParameter LocationRadius { get; set; }
 
         /// <summary>
         /// Gets or sets the name parameter.
@@ -76,6 +56,11 @@ namespace JamendoApi.ApiCalls.Artists
         /// </summary>
         public OrderParameter<ArtistOrder> Order { get; set; }
 
+        /// <summary>
+        /// Gets or sets the tag parameter.
+        /// </summary>
+        public TagParameter Tag { get; set; }
+
         #endregion Parameters
 
         public override IEnumerable<Parameter> Parameters
@@ -84,22 +69,19 @@ namespace JamendoApi.ApiCalls.Artists
             {
                 yield return DateBetween;
                 yield return HasImage;
-                yield return HasLocation;
                 yield return Ids;
                 yield return Limit;
-                yield return LocationCity;
-                yield return LocationCoordinates;
-                yield return LocationRadius;
                 yield return Name;
                 yield return Namesearch;
                 yield return Offset;
                 yield return Order;
+                yield return Tag;
             }
         }
 
         public override string Path
         {
-            get { return "/artists/locations"; }
+            get { return "/artists/musicinfo"; }
         }
 
         public enum ArtistOrder

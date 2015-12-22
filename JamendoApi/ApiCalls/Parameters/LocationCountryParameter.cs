@@ -24,6 +24,8 @@ namespace JamendoApi.ApiCalls.Parameters
 
         /// <summary>
         /// Lists all the possible values for the country.
+        /// <para/>
+        /// Source: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Officially_assigned_code_elements
         /// </summary>
         public enum Country
         {

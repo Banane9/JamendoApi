@@ -41,6 +41,7 @@
     <Compile Include="ApiCalls\Albums\AlbumsCall.cs" />
     <Compile Include="ApiCalls\Albums\AlbumTracksCall.cs" />
     <Compile Include="ApiCalls\Artists\ArtistLocationsCall.cs" />
+    <Compile Include="ApiCalls\Artists\ArtistMusicInfoCall.cs" />
     <Compile Include="ApiCalls\Artists\ArtistsCall.cs" />
     <Compile Include="ApiCalls\Artists\ArtistAlbumsCall.cs" />
     <Compile Include="ApiCalls\Artists\ArtistTracksCall.cs" />
