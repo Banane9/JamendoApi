@@ -11,6 +11,9 @@ namespace JamendoApi.Common
     [Flags]
     public enum FeedType
     {
+        [ApiName("")]
+        All = 0,
+
         [ApiName("album")]
         Album = 1,
 
@@ -37,7 +40,5 @@ namespace JamendoApi.Common
 
         [ApiName("update")]
         Update = 256,
-
-        All = Album | Artist | Playlist | Track | News | Interview | Contest | Video | Update
     }
 }

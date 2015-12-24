@@ -51,7 +51,7 @@ namespace JamendoApi.ApiCalls.Artists
         /// <summary>
         /// Gets or sets the imagesize parameter.
         /// </summary>
-        public CoverImageSizeParameter ImageSize { get; set; }
+        public ImageSizeParameter<CoverSize> ImageSize { get; set; }
 
         /// <summary>
         /// Gets or sets the limit parameter.

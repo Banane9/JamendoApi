@@ -8,7 +8,7 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Playlists
 {
     /// <summary>
-    /// Represents a call to the basic /playlists/tracks path.
+    /// Represents a call to the /playlists/tracks path.
     /// </summary>
     public sealed class PlaylistTracksCall : CallInformation<BasicPlaylist[]>
     {
@@ -44,7 +44,7 @@ namespace JamendoApi.ApiCalls.Playlists
         /// <summary>
         /// Gets or sets the imagesize parameter.
         /// </summary>
-        public CoverImageSizeParameter ImageSize { get; set; }
+        public ImageSizeParameter<CoverSize> ImageSize { get; set; }
 
         /// <summary>
         /// Gets or sets the limit parameter.

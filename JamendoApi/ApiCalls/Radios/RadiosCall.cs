@@ -1,34 +1,41 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Feeds;
+using JamendoApi.ApiParts.Radios;
 using JamendoApi.Common;
 using JamendoApi.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JamendoApi.ApiCalls.Feeds
+namespace JamendoApi.ApiCalls.Radios
 {
     /// <summary>
-    /// Represents a call to the basic /feeds path.
+    /// Represents a call to the basic /radios path.
     /// </summary>
-    public sealed class FeedsCall : CallInformation<BasicFeed[]>
+    public sealed class RadiosCall : CallInformation<BasicRadio[]>
     {
         #region Parameters
 
         /// <summary>
         /// Gets or sets the id parameter.
+        /// <para/>
+        /// Only one Id is possible.
         /// </summary>
-        public IdParameter Ids { get; set; }
+        public IdParameter Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the lang parameter.
+        /// Gets or sets the imagesize parameter.
         /// </summary>
-        public LanguageParameter Language { get; set; }
+        public ImageSizeParameter<RadioImageSize> ImageSize { get; set; }
 
         /// <summary>
         /// Gets or sets the limit parameter.
         /// </summary>
         public LimitParameter Limit { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name parameter.
+        /// </summary>
+        public NameParameter Name { get; set; }
 
         /// <summary>
         /// Gets or sets the offset parameter.
@@ -38,17 +45,12 @@ namespace JamendoApi.ApiCalls.Feeds
         /// <summary>
         /// Gets or sets the order parameter.
         /// </summary>
-        public OrderParameter<FeedOrder> Order { get; set; }
-
-        /// <summary>
-        /// Gets or sets the target parameter.
-        /// </summary>
-        public TargetParameter Target { get; set; }
+        public OrderParameter<RadioOrder> Order { get; set; }
 
         /// <summary>
         /// Gets or sets the type parameter.
         /// </summary>
-        public TypeParameter<FeedType> Type { get; set; }
+        public TypeParameter<RadioType> Type { get; set; }
 
         #endregion Parameters
 
@@ -56,34 +58,31 @@ namespace JamendoApi.ApiCalls.Feeds
         {
             get
             {
-                yield return Ids;
-                yield return Language;
+                yield return Id;
+                yield return ImageSize;
                 yield return Limit;
+                yield return Name;
                 yield return Offset;
                 yield return Order;
-                yield return Target;
                 yield return Type;
             }
         }
 
         public override string Path
         {
-            get { return "/feeds"; }
+            get { return "/radios"; }
         }
 
-        public enum FeedOrder
+        public enum RadioOrder
         {
             [ApiName("id")]
             Id,
 
-            [ApiName("date_start")]
-            StartDate,
+            [ApiName("name")]
+            Name,
 
-            [ApiName("date_end")]
-            EndDate,
-
-            [ApiName("position")]
-            Position
+            [ApiName("dispname")]
+            DisplayName
         }
     }
 }

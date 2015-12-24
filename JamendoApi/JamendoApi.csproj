@@ -77,7 +77,7 @@
     <Compile Include="ApiCalls\Parameters\TrackTypeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TypeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ZipAudioFormatParameter.cs" />
-    <Compile Include="ApiCalls\Parameters\CoverImageSizeParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\ImageSizeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\DateBetweenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\IdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\LimitParameter.cs" />
@@ -87,6 +87,7 @@
     <Compile Include="ApiCalls\Parameters\OffsetParameter.cs" />
     <Compile Include="ApiCalls\Playlists\PlaylistsCall.cs" />
     <Compile Include="ApiCalls\Playlists\PlaylistTracksCall.cs" />
+    <Compile Include="ApiCalls\Radios\RadiosCall.cs" />
     <Compile Include="ApiParts\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiParts\Albums\BasicAlbum.cs" />
     <Compile Include="ApiParts\Albums\TracksAlbum.cs" />
@@ -104,7 +105,7 @@
     <Compile Include="ApiParts\Playlists\BasicPlaylist.cs" />
     <Compile Include="ApiParts\Playlists\TracksPlaylist.cs" />
     <Compile Include="ApiParts\Radios\BasicRadio.cs" />
-    <Compile Include="ApiParts\Radios\RadioType.cs" />
+    <Compile Include="Common\RadioType.cs" />
     <Compile Include="ApiParts\Radios\StreamRadio.cs" />
     <Compile Include="ApiParts\Reviews\AlbumReview.cs" />
     <Compile Include="ApiParts\Reviews\TrackReview.cs" />
