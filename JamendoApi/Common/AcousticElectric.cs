@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JamendoApi.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,7 +10,12 @@ namespace JamendoApi.Common
     /// </summary>
     public enum AcousticElectric
     {
+        Default,
+
+        [ApiName("acoustic")]
         Acoustic,
+
+        [ApiName("electric")]
         Electric
     }
 }

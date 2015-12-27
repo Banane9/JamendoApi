@@ -5,7 +5,7 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Parameters
 {
     /// <summary>
-    /// Represents the value for *datbetween parameters.
+    /// Represents the value for *datebetween parameters.
     /// </summary>
     public sealed class DateBetween
     {

@@ -14,7 +14,7 @@ namespace JamendoApi.Util
             var enumValues = Enum.GetValues(typeof(TEnum)).Cast<int>();
             var origValue = (int)(object)enumValue;
 
-            return enumValues.Where(value => (origValue & value) > 0).Cast<TEnum>();
+            return enumValues.Where(value => (origValue & value) > 0 && value != origValue).Cast<TEnum>();
         }
 
         public static string GetName(this Enum enumValue)
