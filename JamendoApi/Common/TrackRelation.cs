@@ -8,6 +8,7 @@ namespace JamendoApi.Common
     /// <summary>
     /// Lists the possible values for the type of relation.
     /// </summary>
+    [Flags]
     public enum TrackRelation
     {
         /// <summary>
@@ -28,6 +29,8 @@ namespace JamendoApi.Common
         /// User liked the track.
         /// </summary>
         [ApiName("like")]
-        Like
+        Like,
+
+        All = Review | Favorite | Like
     }
 }

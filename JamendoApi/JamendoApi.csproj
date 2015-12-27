@@ -123,6 +123,7 @@
     <Compile Include="ApiCalls\Users\UserAlbumsCall.cs" />
     <Compile Include="ApiCalls\Users\UserArtistsCall.cs" />
     <Compile Include="ApiCalls\Users\UsersCall.cs" />
+    <Compile Include="ApiCalls\Users\UserTracksCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiEntities\Albums\BasicAlbum.cs" />
     <Compile Include="ApiEntities\Albums\TracksAlbum.cs" />
