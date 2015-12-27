@@ -119,6 +119,7 @@
     <Compile Include="ApiCalls\Reviews\TrackReviewsCall.cs" />
     <Compile Include="ApiCalls\Tracks\TracksCall.cs" />
     <Compile Include="ApiCalls\Tracks\TrackSimilarCall.cs" />
+    <Compile Include="ApiCalls\Users\UsersCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiEntities\Albums\BasicAlbum.cs" />
     <Compile Include="ApiEntities\Albums\TracksAlbum.cs" />

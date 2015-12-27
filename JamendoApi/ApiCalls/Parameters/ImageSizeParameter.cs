@@ -30,6 +30,23 @@ namespace JamendoApi.ApiCalls.Parameters
     }
 
     /// <summary>
+    /// Lists the possible values for the size of user avatars.
+    /// </summary>
+    public enum AvatarSize
+    {
+        Default,
+
+        [ApiName("30")]
+        Px30,
+
+        [ApiName("50")]
+        Px50,
+
+        [ApiName("100")]
+        Px100
+    }
+
+    /// <summary>
     /// Lists the possible values for the size of album/track covers.
     /// </summary>
     public enum CoverSize
