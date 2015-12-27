@@ -120,6 +120,7 @@
     <Compile Include="ApiCalls\Reviews\TrackReviewsCall.cs" />
     <Compile Include="ApiCalls\Tracks\TracksCall.cs" />
     <Compile Include="ApiCalls\Tracks\TrackSimilarCall.cs" />
+    <Compile Include="ApiCalls\Users\UserAlbumsCall.cs" />
     <Compile Include="ApiCalls\Users\UserArtistsCall.cs" />
     <Compile Include="ApiCalls\Users\UsersCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
@@ -139,6 +140,8 @@
     <Compile Include="ApiEntities\Playlists\BasicPlaylist.cs" />
     <Compile Include="ApiEntities\Playlists\TracksPlaylist.cs" />
     <Compile Include="ApiEntities\Radios\BasicRadio.cs" />
+    <Compile Include="Common\AlbumRelation.cs" />
+    <Compile Include="Common\ArtistRelation.cs" />
     <Compile Include="Common\RadioType.cs" />
     <Compile Include="ApiEntities\Radios\StreamRadio.cs" />
     <Compile Include="ApiEntities\Reviews\AlbumReview.cs" />
@@ -152,6 +155,7 @@
     <Compile Include="Common\Gender.cs" />
     <Compile Include="Common\Language.cs" />
     <Compile Include="Common\Tempo.cs" />
+    <Compile Include="Common\TrackRelation.cs" />
     <Compile Include="Common\TrackType.cs" />
     <Compile Include="Common\UserStatus.cs" />
     <Compile Include="Common\VocalInstrumental.cs" />

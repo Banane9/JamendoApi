@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using JamendoApi.Common;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
@@ -111,7 +112,7 @@ namespace JamendoApi.ApiEntities.Users
             /// <para/>
             /// For Review, the value indicates the score given.
             /// </summary>
-            public ReadOnlyDictionary<Relation, uint> Relations { get; private set; }
+            public ReadOnlyDictionary<TrackRelation, uint> Relations { get; private set; }
 
             /// <summary>
             /// Gets the track's release date.
@@ -126,29 +127,6 @@ namespace JamendoApi.ApiEntities.Users
             [JsonProperty(PropertyName = "updatedate", Required = Required.Always)]
             [JsonConverter(typeof(IsoDateTimeConverter))]
             public DateTime UpdateDate { get; private set; }
-
-            /// <summary>
-            /// Lists the possible values for the type of relation.
-            /// </summary>
-            public enum Relation
-            {
-                /// <summary>
-                /// User has reviewed the track.
-                /// <para/>
-                /// The value is the score that the user gave it, from 1 to 10.
-                /// </summary>
-                Review,
-
-                /// <summary>
-                /// User has favorited the track.
-                /// </summary>
-                Favorite,
-
-                /// <summary>
-                /// User liked the track.
-                /// </summary>
-                Like
-            }
         }
     }
 }

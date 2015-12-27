@@ -9,9 +9,9 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Users
 {
     /// <summary>
-    /// Represents a call to the /users/artists path.
+    /// Represents a call to the /users/albums path.
     /// </summary>
-    public sealed class UserArtistsCall : CallInformation<ArtistsUser[]>
+    public sealed class UserAlbumsCall : CallInformation<AlbumsUser[]>
     {
         #region Parameters
 
@@ -19,6 +19,16 @@ namespace JamendoApi.ApiCalls.Users
         /// Gets or sets the access_token parameter.
         /// </summary>
         public AccessTokenParameter AccessToken { get; set; }
+
+        /// <summary>
+        /// Gets or sets the album_ids parameter.
+        /// </summary>
+        public AlbumIdParameter AlbumIds { get; set; }
+
+        /// <summary>
+        /// Gets or sets the album_imagesize parameter.
+        /// </summary>
+        public ImageSizeParameter<CoverSize> AlbumImageSize { get; set; }
 
         /// <summary>
         /// Gets or sets the artist_id parameter.
@@ -53,12 +63,12 @@ namespace JamendoApi.ApiCalls.Users
         /// <summary>
         /// Gets or sets the order parameter.
         /// </summary>
-        public OrderParameter<ArtistOrder> Order { get; set; }
+        public OrderParameter<AlbumOrder> Order { get; set; }
 
         /// <summary>
         /// Gets or sets the relation parameter.
         /// </summary>
-        public RelationParameter<ArtistRelation> Relation { get; set; }
+        public RelationParameter<AlbumRelation> Relation { get; set; }
 
         #endregion Parameters
 
@@ -67,6 +77,8 @@ namespace JamendoApi.ApiCalls.Users
             get
             {
                 yield return AccessToken;
+                yield return AlbumIds;
+                yield return AlbumImageSize;
                 yield return ArtistIds;
                 yield return Ids;
                 yield return ImageSize;
@@ -80,10 +92,10 @@ namespace JamendoApi.ApiCalls.Users
 
         public override string Path
         {
-            get { return "/users/artists"; }
+            get { return "/users/albums"; }
         }
 
-        public UserArtistsCall(IdParameter ids)
+        public UserAlbumsCall(IdParameter ids)
         {
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids), "Ids can't be null.");
@@ -91,7 +103,7 @@ namespace JamendoApi.ApiCalls.Users
             Ids = ids;
         }
 
-        public UserArtistsCall(AccessTokenParameter accessToken)
+        public UserAlbumsCall(AccessTokenParameter accessToken)
         {
             if (accessToken == null)
                 throw new ArgumentNullException(nameof(accessToken), "AccessToken can't be null.");
@@ -99,7 +111,7 @@ namespace JamendoApi.ApiCalls.Users
             AccessToken = accessToken;
         }
 
-        public UserArtistsCall(NameParameter name)
+        public UserAlbumsCall(NameParameter name)
         {
             if (name == null)
                 throw new ArgumentNullException(nameof(name), "Name can't be null.");
@@ -107,7 +119,7 @@ namespace JamendoApi.ApiCalls.Users
             Name = name;
         }
 
-        public enum ArtistOrder
+        public enum AlbumOrder
         {
             [ApiName("updatedate")]
             UpdateDate

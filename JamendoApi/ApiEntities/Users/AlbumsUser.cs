@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using JamendoApi.Common;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
@@ -63,7 +64,7 @@ namespace JamendoApi.ApiEntities.Users
             /// A value other than 0 designates that the relation is there.
             /// </summary>
             [JsonProperty(PropertyName = "relations", Required = Required.Always)]
-            public ReadOnlyDictionary<Relation, uint> Relations { get; private set; }
+            public ReadOnlyDictionary<AlbumRelation, uint> Relations { get; private set; }
 
             /// <summary>
             /// Gets the album's release date.
@@ -78,17 +79,6 @@ namespace JamendoApi.ApiEntities.Users
             [JsonProperty(PropertyName = "updatedate", Required = Required.Always)]
             [JsonConverter(typeof(IsoDateTimeConverter))]
             public DateTime UpdateDate { get; private set; }
-
-            /// <summary>
-            /// Lists the possible values for the type of relation.
-            /// </summary>
-            public enum Relation
-            {
-                /// <summary>
-                /// The user has added the album to his My Albums list.
-                /// </summary>
-                MyAlbum
-            }
         }
     }
 }
