@@ -8,7 +8,7 @@ namespace JamendoApi.ApiCalls.Parameters
     /// <summary>
     /// Represents the imagesize parameter which is present in calls relating to albums, tracks and radios.
     /// </summary>
-    public sealed class ImageSizeParameter<TSize> : Parameter<ImageSizeParameter<TSize>, TSize>
+    public class ImageSizeParameter<TSize> : Parameter<ImageSizeParameter<TSize>, TSize>
     {
         public override string Name
         {

@@ -60,6 +60,7 @@
     <Compile Include="ApiCalls\Parameters\HasLocationParameter.cs" />
     <Compile Include="ApiCalls\Parameters\AccessTokenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\PositionBetweenParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\TrackImageSizeParameter.cs" />
     <Compile Include="ApiCalls\Parameters\UserNameParameter.cs" />
     <Compile Include="ApiCalls\Parameters\UserIdParameter.cs" />
     <Compile Include="ApiCalls\Parameters\LanguageParameter.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="ApiCalls\Playlists\PlaylistsCall.cs" />
     <Compile Include="ApiCalls\Playlists\PlaylistTracksCall.cs" />
     <Compile Include="ApiCalls\Radios\RadiosCall.cs" />
+    <Compile Include="ApiCalls\Radios\RadioStreamCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiEntities\Albums\BasicAlbum.cs" />
     <Compile Include="ApiEntities\Albums\TracksAlbum.cs" />
