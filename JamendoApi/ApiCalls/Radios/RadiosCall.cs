@@ -1,5 +1,5 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Radios;
+using JamendoApi.ApiEntities.Radios;
 using JamendoApi.Common;
 using JamendoApi.Util;
 using System;

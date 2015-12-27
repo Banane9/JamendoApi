@@ -1,5 +1,5 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Feeds;
+using JamendoApi.ApiEntities.Feeds;
 using JamendoApi.Common;
 using JamendoApi.Util;
 using System;

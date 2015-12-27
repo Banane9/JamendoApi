@@ -1,4 +1,4 @@
-﻿using JamendoApi.ApiParts.Users;
+﻿using JamendoApi.ApiEntities.Users;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;

@@ -1,4 +1,4 @@
-﻿using JamendoApi.ApiParts;
+﻿using JamendoApi.ApiEntities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

@@ -1,5 +1,5 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Playlists;
+using JamendoApi.ApiEntities.Playlists;
 using JamendoApi.Util;
 using System;
 using System.Collections.Generic;

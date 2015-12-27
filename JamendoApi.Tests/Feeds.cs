@@ -1,4 +1,4 @@
-﻿using JamendoApi.ApiParts.Feeds;
+﻿using JamendoApi.ApiEntities.Feeds;
 using JamendoApi.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;

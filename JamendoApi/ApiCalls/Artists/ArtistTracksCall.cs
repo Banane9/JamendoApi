@@ -1,5 +1,5 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Artists;
+using JamendoApi.ApiEntities.Artists;
 using JamendoApi.Util;
 using System;
 using System.Collections.Generic;

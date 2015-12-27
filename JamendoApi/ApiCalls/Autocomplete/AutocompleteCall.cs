@@ -1,5 +1,5 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Autocomplete;
+using JamendoApi.ApiEntities.Autocomplete;
 using System;
 using System.Collections.Generic;
 using System.Linq;

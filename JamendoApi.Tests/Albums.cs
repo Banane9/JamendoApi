@@ -1,6 +1,6 @@
 ﻿using JamendoApi.ApiCalls.Albums;
 using JamendoApi.ApiCalls.Parameters;
-using JamendoApi.ApiParts.Albums;
+using JamendoApi.ApiEntities.Albums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;

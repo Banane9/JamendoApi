@@ -12,11 +12,11 @@ namespace JamendoApi.Tests
         public void HeaderDeserializes()
         {
             var deserializer = new JsonSerializer();
-            var headers = deserializer.Deserialize<ApiParts.Headers>(new JsonTextReader(new StringReader(
+            var headers = deserializer.Deserialize<ApiEntities.Headers>(new JsonTextReader(new StringReader(
                 "{\"status\":\"failed\", \"code\":1, \"error_message\":\"test\", \"warnings\":\"Test\", \"results_count\":1 }")));
 
-            Assert.AreEqual(ApiParts.Headers.ResponseStatus.Failed, headers.Status);
-            Assert.AreEqual(ApiParts.Headers.StatusCode.Exception, headers.Code);
+            Assert.AreEqual(ApiEntities.Headers.ResponseStatus.Failed, headers.Status);
+            Assert.AreEqual(ApiEntities.Headers.StatusCode.Exception, headers.Code);
             Assert.AreEqual("test", headers.ErrorMessage);
             Assert.AreEqual("Test", headers.Warnings);
             Assert.AreEqual(1u, headers.ResultCount);

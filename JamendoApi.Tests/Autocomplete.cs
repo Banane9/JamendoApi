@@ -1,4 +1,4 @@
-﻿using JamendoApi.ApiParts.Autocomplete;
+﻿using JamendoApi.ApiEntities.Autocomplete;
 using JamendoApi.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
