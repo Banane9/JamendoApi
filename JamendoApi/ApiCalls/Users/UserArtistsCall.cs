@@ -1,5 +1,6 @@
 ﻿using JamendoApi.ApiCalls.Parameters;
 using JamendoApi.ApiEntities.Users;
+using JamendoApi.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Linq;
 namespace JamendoApi.ApiCalls.Users
 {
     /// <summary>
-    /// Represents a call to the basic /users path.
+    /// Represents a call to the /users/artists path.
     /// </summary>
-    public sealed class UsersCall : CallInformation<BasicUser[]>
+    public sealed class UserArtistsCall : CallInformation<ArtistsUser[]>
     {
         #region Parameters
 
@@ -17,6 +18,11 @@ namespace JamendoApi.ApiCalls.Users
         /// Gets or sets the access_token parameter.
         /// </summary>
         public AccessTokenParameter AccessToken { get; set; }
+
+        /// <summary>
+        /// Gets or sets the artist_id parameter.
+        /// </summary>
+        public ArtistIdParameter ArtistIds { get; set; }
 
         /// <summary>
         /// Gets or sets the id parameter.
@@ -43,6 +49,16 @@ namespace JamendoApi.ApiCalls.Users
         /// </summary>
         public OffsetParameter Offset { get; set; }
 
+        /// <summary>
+        /// Gets or sets the order parameter.
+        /// </summary>
+        public OrderParameter<ArtistOrder> Order { get; set; }
+
+        /// <summary>
+        /// Gets or sets the relation parameter.
+        /// </summary>
+        public RelationParameter<ArtistRelation> Relation { get; set; }
+
         #endregion Parameters
 
         public override IEnumerable<Parameter> Parameters
@@ -50,20 +66,23 @@ namespace JamendoApi.ApiCalls.Users
             get
             {
                 yield return AccessToken;
+                yield return ArtistIds;
                 yield return Ids;
                 yield return ImageSize;
                 yield return Limit;
                 yield return Name;
                 yield return Offset;
+                yield return Order;
+                yield return Relation;
             }
         }
 
         public override string Path
         {
-            get { return "/users"; }
+            get { return "/users/artists"; }
         }
 
-        public UsersCall(IdParameter ids)
+        public UserArtistsCall(IdParameter ids)
         {
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids), "Ids can't be null.");
@@ -71,7 +90,7 @@ namespace JamendoApi.ApiCalls.Users
             Ids = ids;
         }
 
-        public UsersCall(AccessTokenParameter accessToken)
+        public UserArtistsCall(AccessTokenParameter accessToken)
         {
             if (accessToken == null)
                 throw new ArgumentNullException(nameof(accessToken), "AccessToken can't be null.");
@@ -79,12 +98,24 @@ namespace JamendoApi.ApiCalls.Users
             AccessToken = accessToken;
         }
 
-        public UsersCall(NameParameter name)
+        public UserArtistsCall(NameParameter name)
         {
             if (name == null)
                 throw new ArgumentNullException(nameof(name), "Name can't be null.");
 
             Name = name;
+        }
+
+        public enum ArtistOrder
+        {
+            [ApiName("updatedate")]
+            UpdateDate
+        }
+
+        public enum ArtistRelation
+        {
+            [ApiName("fan")]
+            Fan
         }
     }
 }

@@ -79,6 +79,7 @@
     <Compile Include="ApiCalls\Parameters\PositionBetweenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ProBackgroundParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ProLicensingParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\RelationParameter.cs" />
     <Compile Include="ApiCalls\Parameters\SearchParameter.cs" />
     <Compile Include="ApiCalls\Parameters\SpeedParameter.cs" />
     <Compile Include="ApiCalls\Parameters\TagsParameter.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="ApiCalls\Reviews\TrackReviewsCall.cs" />
     <Compile Include="ApiCalls\Tracks\TracksCall.cs" />
     <Compile Include="ApiCalls\Tracks\TrackSimilarCall.cs" />
+    <Compile Include="ApiCalls\Users\UserArtistsCall.cs" />
     <Compile Include="ApiCalls\Users\UsersCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiEntities\Albums\BasicAlbum.cs" />
