@@ -92,6 +92,8 @@
     <Compile Include="ApiCalls\Radios\RadiosCall.cs" />
     <Compile Include="ApiCalls\Radios\RadioStreamCall.cs" />
     <Compile Include="ApiCalls\Reviews\AlbumReviewsCall.cs" />
+    <Compile Include="ApiCalls\Reviews\ReviewOrder.cs" />
+    <Compile Include="ApiCalls\Reviews\TrackReviewsCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiEntities\Albums\BasicAlbum.cs" />
     <Compile Include="ApiEntities\Albums\TracksAlbum.cs" />

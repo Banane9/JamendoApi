@@ -9,7 +9,7 @@ namespace JamendoApi.ApiCalls.Reviews
     /// <summary>
     /// Represents a call to the /reviews/albums path.
     /// </summary>
-    public sealed class AlbumReviewsCall : CallInformation<AlbumReview[]>
+    public sealed class TrackReviewsCall : CallInformation<TrackReview[]>
     {
         #region Parameters
 
@@ -27,6 +27,16 @@ namespace JamendoApi.ApiCalls.Reviews
         /// Gets or sets the artist_id parameter.
         /// </summary>
         public ArtistIdParameter ArtistId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the audiodlformat parameter.
+        /// </summary>
+        public AudioDownloadFormatParameter AudioDownloadFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the audioformat parameter.
+        /// </summary>
+        public AudioFormatParameter AudioFormat { get; set; }
 
         /// <summary>
         /// Gets or sets the datebetween parameter.
@@ -64,6 +74,11 @@ namespace JamendoApi.ApiCalls.Reviews
         public OrderParameter<ReviewOrder> Order { get; set; }
 
         /// <summary>
+        /// Gets or sets the track_id parameter.
+        /// </summary>
+        public TrackIdParameter TrackIds { get; set; }
+
+        /// <summary>
         /// Gets or sets the user_id parameter.
         /// </summary>
         public UserIdParameter UserId { get; set; }
@@ -77,6 +92,8 @@ namespace JamendoApi.ApiCalls.Reviews
                 yield return AccessToken;
                 yield return AlbumIds;
                 yield return ArtistId;
+                yield return AudioDownloadFormat;
+                yield return AudioFormat;
                 yield return DateBetween;
                 yield return HasScore;
                 yield return Ids;
@@ -84,13 +101,14 @@ namespace JamendoApi.ApiCalls.Reviews
                 yield return Limit;
                 yield return Offset;
                 yield return Order;
+                yield return TrackIds;
                 yield return UserId;
             }
         }
 
         public override string Path
         {
-            get { return "/reviews/albums"; }
+            get { return "/reviews/tracks"; }
         }
     }
 }
