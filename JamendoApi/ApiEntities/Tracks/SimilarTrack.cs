@@ -11,7 +11,7 @@ namespace JamendoApi.ApiEntities.Tracks
     /// Documented here: https://developer.jamendo.com/v3.0/tracks/similar
     /// </summary>
     [JsonObject]
-    public sealed class SimiliarTrack : BasicTrack
+    public sealed class SimilarTrack : BasicTrack
     {
         /// <summary>
         /// Gets the track's similarity score.

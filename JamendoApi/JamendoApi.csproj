@@ -71,6 +71,8 @@
     <Compile Include="ApiCalls\Parameters\AccessTokenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\HasScoreParameter.cs" />
     <Compile Include="ApiCalls\Parameters\IncludeParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\NoAlbumParameter.cs" />
+    <Compile Include="ApiCalls\Parameters\NoArtistParameter.cs" />
     <Compile Include="ApiCalls\Parameters\PositionBetweenParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ProBackgroundParameter.cs" />
     <Compile Include="ApiCalls\Parameters\ProLicensingParameter.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="ApiCalls\Reviews\ReviewOrder.cs" />
     <Compile Include="ApiCalls\Reviews\TrackReviewsCall.cs" />
     <Compile Include="ApiCalls\Tracks\TracksCall.cs" />
+    <Compile Include="ApiCalls\Tracks\TrackSimilarCall.cs" />
     <Compile Include="ApiEntities\Albums\MusicInfoAlbum.cs" />
     <Compile Include="ApiEntities\Albums\BasicAlbum.cs" />
     <Compile Include="ApiEntities\Albums\TracksAlbum.cs" />
@@ -135,7 +138,7 @@
     <Compile Include="ApiEntities\Reviews\AlbumReview.cs" />
     <Compile Include="ApiEntities\Reviews\TrackReview.cs" />
     <Compile Include="ApiEntities\Tracks\BasicTrack.cs" />
-    <Compile Include="ApiEntities\Tracks\SimiliarTrack.cs" />
+    <Compile Include="ApiEntities\Tracks\SimilarTrack.cs" />
     <Compile Include="ApiEntities\Users\TracksUser.cs" />
     <Compile Include="Common\AcousticElectric.cs" />
     <Compile Include="Common\AutocompleteEntity.cs" />
