@@ -4,6 +4,9 @@ JamendoApi
 *Inofficial* client for the [Jamendo Api v3.0](https://developer.jamendo.com/v3.0).
 
 
+Available on NuGet: [Inofficial Jamendo Api Client](https://www.nuget.org/packages/JamendoApi/)
+
+
 
 ---------------------------------------------------------------------------------------------------------
 

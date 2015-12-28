@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>JamendoApi</id>
+        <version>1.0.0-beta</version>
+        <title>Inofficial Jamendo Api Client</title>
+        <authors>Banane9</authors>
+        <owners>Banane9</owners>
+        <projectUrl>http://github.com/Banane9/JamendoApi</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Client for the Jamendo Api v3.0</description>
+        <summary>Client for the Jamendo Api v3.0</summary>
+        <releaseNotes>First release.
+
+There might be inconsistencies, though everything should work as far as I know.</releaseNotes>
+        <copyright>Banane9</copyright>
+        <language>en</language>
+        <tags>jamendo api rest json jam music library artists albums tracks</tags>
+        <dependencies>
+            <dependency id="Microsoft.Net.Http" version="2.2.29" />
+            <dependency id="Newtonsoft.Json" version="7.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\MonoAndroid\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\MonoAndroid\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\MonoTouch\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\MonoTouch\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\net45\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\net45\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\netcore45\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\netcore45\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\portable-net45+wp8+win8\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\portable-net45+wp8+win8\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\wp8\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\wp8\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\wpa81\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\wpa81\JamendoApi.xml" />
+        <file src="JamendoApi\ApiCalls\Albums\AlbumMusicInfoCall.cs" target="src\ApiCalls\Albums\AlbumMusicInfoCall.cs" />
+        <file src="JamendoApi\ApiCalls\Albums\AlbumsCall.cs" target="src\ApiCalls\Albums\AlbumsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Albums\AlbumTracksCall.cs" target="src\ApiCalls\Albums\AlbumTracksCall.cs" />
+        <file src="JamendoApi\ApiCalls\Artists\ArtistAlbumsCall.cs" target="src\ApiCalls\Artists\ArtistAlbumsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Artists\ArtistLocationsCall.cs" target="src\ApiCalls\Artists\ArtistLocationsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Artists\ArtistMusicInfoCall.cs" target="src\ApiCalls\Artists\ArtistMusicInfoCall.cs" />
+        <file src="JamendoApi\ApiCalls\Artists\ArtistsCall.cs" target="src\ApiCalls\Artists\ArtistsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Artists\ArtistTracksCall.cs" target="src\ApiCalls\Artists\ArtistTracksCall.cs" />
+        <file src="JamendoApi\ApiCalls\Autocomplete\AutocompleteCall.cs" target="src\ApiCalls\Autocomplete\AutocompleteCall.cs" />
+        <file src="JamendoApi\ApiCalls\Feeds\FeedsCall.cs" target="src\ApiCalls\Feeds\FeedsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AccessTokenParameter.cs" target="src\ApiCalls\Parameters\AccessTokenParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AcousticElectricParameter.cs" target="src\ApiCalls\Parameters\AcousticElectricParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AlbumDateBetweenParameter.cs" target="src\ApiCalls\Parameters\AlbumDateBetweenParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AlbumIdParameter.cs" target="src\ApiCalls\Parameters\AlbumIdParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AlbumNameParameter.cs" target="src\ApiCalls\Parameters\AlbumNameParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\ArtistIdParameter.cs" target="src\ApiCalls\Parameters\ArtistIdParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\ArtistNameParameter.cs" target="src\ApiCalls\Parameters\ArtistNameParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AudioDownloadFormatParameter.cs" target="src\ApiCalls\Parameters\AudioDownloadFormatParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\AudioFormatParameter.cs" target="src\ApiCalls\Parameters\AudioFormatParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\BoostParameter.cs" target="src\ApiCalls\Parameters\BoostParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\CCNCParameter.cs" target="src\ApiCalls\Parameters\CCNCParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\CCNDParameter.cs" target="src\ApiCalls\Parameters\CCNDParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\CCSAParameter.cs" target="src\ApiCalls\Parameters\CCSAParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\DateBetweenParameter.cs" target="src\ApiCalls\Parameters\DateBetweenParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\DurationBetweenParameter.cs" target="src\ApiCalls\Parameters\DurationBetweenParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\EntityParameter.cs" target="src\ApiCalls\Parameters\EntityParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\FeaturedParameter.cs" target="src\ApiCalls\Parameters\FeaturedParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\FuzzyTagsParameter.cs" target="src\ApiCalls\Parameters\FuzzyTagsParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\GenderParameter.cs" target="src\ApiCalls\Parameters\GenderParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\GroupByParameter.cs" target="src\ApiCalls\Parameters\GroupByParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\HasImageParameter.cs" target="src\ApiCalls\Parameters\HasImageParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\HasLocationParameter.cs" target="src\ApiCalls\Parameters\HasLocationParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\HasScoreParameter.cs" target="src\ApiCalls\Parameters\HasScoreParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\IdParameter.cs" target="src\ApiCalls\Parameters\IdParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\ImageSizeParameter.cs" target="src\ApiCalls\Parameters\ImageSizeParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\IncludeParameter.cs" target="src\ApiCalls\Parameters\IncludeParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\LanguageParameter.cs" target="src\ApiCalls\Parameters\LanguageParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\LimitParameter.cs" target="src\ApiCalls\Parameters\LimitParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\LocationCityParameter.cs" target="src\ApiCalls\Parameters\LocationCityParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\LocationCoordinatesParameter.cs" target="src\ApiCalls\Parameters\LocationCoordinatesParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\LocationCountryParameter.cs" target="src\ApiCalls\Parameters\LocationCountryParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\LocationRadiusParameter.cs" target="src\ApiCalls\Parameters\LocationRadiusParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\MatchcountParameter.cs" target="src\ApiCalls\Parameters\MatchcountParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\NameParameter.cs" target="src\ApiCalls\Parameters\NameParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\NamesearchParameter.cs" target="src\ApiCalls\Parameters\NamesearchParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\NoAlbumParameter.cs" target="src\ApiCalls\Parameters\NoAlbumParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\NoArtistParameter.cs" target="src\ApiCalls\Parameters\NoArtistParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\OffsetParameter.cs" target="src\ApiCalls\Parameters\OffsetParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\OrderParameter.cs" target="src\ApiCalls\Parameters\OrderParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\PositionBetweenParameter.cs" target="src\ApiCalls\Parameters\PositionBetweenParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\PrefixParameter.cs" target="src\ApiCalls\Parameters\PrefixParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\ProBackgroundParameter.cs" target="src\ApiCalls\Parameters\ProBackgroundParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\ProLicensingParameter.cs" target="src\ApiCalls\Parameters\ProLicensingParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\RelationParameter.cs" target="src\ApiCalls\Parameters\RelationParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\SearchParameter.cs" target="src\ApiCalls\Parameters\SearchParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\SpeedParameter.cs" target="src\ApiCalls\Parameters\SpeedParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TagParameter.cs" target="src\ApiCalls\Parameters\TagParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TagsParameter.cs" target="src\ApiCalls\Parameters\TagsParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TargetParameter.cs" target="src\ApiCalls\Parameters\TargetParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TrackIdParameter.cs" target="src\ApiCalls\Parameters\TrackIdParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TrackImageSizeParameter.cs" target="src\ApiCalls\Parameters\TrackImageSizeParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TrackNameParameter.cs" target="src\ApiCalls\Parameters\TrackNameParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TrackTypeParameter.cs" target="src\ApiCalls\Parameters\TrackTypeParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\TypeParameter.cs" target="src\ApiCalls\Parameters\TypeParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\UserIdParameter.cs" target="src\ApiCalls\Parameters\UserIdParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\UserNameParameter.cs" target="src\ApiCalls\Parameters\UserNameParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\VocalInstrumentalParameter.cs" target="src\ApiCalls\Parameters\VocalInstrumentalParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\XArtistParameter.cs" target="src\ApiCalls\Parameters\XArtistParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Parameters\ZipAudioformatParameter.cs" target="src\ApiCalls\Parameters\ZipAudioformatParameter.cs" />
+        <file src="JamendoApi\ApiCalls\Playlists\PlaylistsCall.cs" target="src\ApiCalls\Playlists\PlaylistsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Playlists\PlaylistTracksCall.cs" target="src\ApiCalls\Playlists\PlaylistTracksCall.cs" />
+        <file src="JamendoApi\ApiCalls\Radios\RadiosCall.cs" target="src\ApiCalls\Radios\RadiosCall.cs" />
+        <file src="JamendoApi\ApiCalls\Radios\RadioStreamCall.cs" target="src\ApiCalls\Radios\RadioStreamCall.cs" />
+        <file src="JamendoApi\ApiCalls\Reviews\AlbumReviewsCall.cs" target="src\ApiCalls\Reviews\AlbumReviewsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Reviews\ReviewOrder.cs" target="src\ApiCalls\Reviews\ReviewOrder.cs" />
+        <file src="JamendoApi\ApiCalls\Reviews\TrackReviewsCall.cs" target="src\ApiCalls\Reviews\TrackReviewsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Tracks\TracksCall.cs" target="src\ApiCalls\Tracks\TracksCall.cs" />
+        <file src="JamendoApi\ApiCalls\Tracks\TrackSimilarCall.cs" target="src\ApiCalls\Tracks\TrackSimilarCall.cs" />
+        <file src="JamendoApi\ApiCalls\Users\UserAlbumsCall.cs" target="src\ApiCalls\Users\UserAlbumsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Users\UserArtistsCall.cs" target="src\ApiCalls\Users\UserArtistsCall.cs" />
+        <file src="JamendoApi\ApiCalls\Users\UsersCall.cs" target="src\ApiCalls\Users\UsersCall.cs" />
+        <file src="JamendoApi\ApiCalls\Users\UserTracksCall.cs" target="src\ApiCalls\Users\UserTracksCall.cs" />
+        <file src="JamendoApi\ApiCalls\CallInformation.cs" target="src\ApiCalls\CallInformation.cs" />
+        <file src="JamendoApi\ApiCalls\Parameter.cs" target="src\ApiCalls\Parameter.cs" />
+        <file src="JamendoApi\ApiEntities\Albums\BasicAlbum.cs" target="src\ApiEntities\Albums\BasicAlbum.cs" />
+        <file src="JamendoApi\ApiEntities\Albums\MusicInfoAlbum.cs" target="src\ApiEntities\Albums\MusicInfoAlbum.cs" />
+        <file src="JamendoApi\ApiEntities\Albums\TracksAlbum.cs" target="src\ApiEntities\Albums\TracksAlbum.cs" />
+        <file src="JamendoApi\ApiEntities\Artists\BasicArtist.cs" target="src\ApiEntities\Artists\BasicArtist.cs" />
+        <file src="JamendoApi\ApiEntities\Artists\LocationsArtist.cs" target="src\ApiEntities\Artists\LocationsArtist.cs" />
+        <file src="JamendoApi\ApiEntities\Artists\MusicInfoArtist.cs" target="src\ApiEntities\Artists\MusicInfoArtist.cs" />
+        <file src="JamendoApi\ApiEntities\Artists\TracksArtist.cs" target="src\ApiEntities\Artists\TracksArtist.cs" />
+        <file src="JamendoApi\ApiEntities\Autocomplete\Matches.cs" target="src\ApiEntities\Autocomplete\Matches.cs" />
+        <file src="JamendoApi\ApiEntities\Feeds\BasicFeed.cs" target="src\ApiEntities\Feeds\BasicFeed.cs" />
+        <file src="JamendoApi\ApiEntities\Generic\MusicInfo.cs" target="src\ApiEntities\Generic\MusicInfo.cs" />
+        <file src="JamendoApi\ApiEntities\Playlists\BasicPlaylist.cs" target="src\ApiEntities\Playlists\BasicPlaylist.cs" />
+        <file src="JamendoApi\ApiEntities\Playlists\TracksPlaylist.cs" target="src\ApiEntities\Playlists\TracksPlaylist.cs" />
+        <file src="JamendoApi\ApiEntities\Radios\BasicRadio.cs" target="src\ApiEntities\Radios\BasicRadio.cs" />
+        <file src="JamendoApi\ApiEntities\Radios\StreamRadio.cs" target="src\ApiEntities\Radios\StreamRadio.cs" />
+        <file src="JamendoApi\ApiEntities\Reviews\AlbumReview.cs" target="src\ApiEntities\Reviews\AlbumReview.cs" />
+        <file src="JamendoApi\ApiEntities\Reviews\TrackReview.cs" target="src\ApiEntities\Reviews\TrackReview.cs" />
+        <file src="JamendoApi\ApiEntities\Tracks\BasicTrack.cs" target="src\ApiEntities\Tracks\BasicTrack.cs" />
+        <file src="JamendoApi\ApiEntities\Tracks\SimilarTrack.cs" target="src\ApiEntities\Tracks\SimilarTrack.cs" />
+        <file src="JamendoApi\ApiEntities\Users\AlbumsUser.cs" target="src\ApiEntities\Users\AlbumsUser.cs" />
+        <file src="JamendoApi\ApiEntities\Users\ArtistsUser.cs" target="src\ApiEntities\Users\ArtistsUser.cs" />
+        <file src="JamendoApi\ApiEntities\Users\BasicUser.cs" target="src\ApiEntities\Users\BasicUser.cs" />
+        <file src="JamendoApi\ApiEntities\Users\TracksUser.cs" target="src\ApiEntities\Users\TracksUser.cs" />
+        <file src="JamendoApi\ApiEntities\Headers.cs" target="src\ApiEntities\Headers.cs" />
+        <file src="JamendoApi\Common\AcousticElectric.cs" target="src\Common\AcousticElectric.cs" />
+        <file src="JamendoApi\Common\AlbumRelation.cs" target="src\Common\AlbumRelation.cs" />
+        <file src="JamendoApi\Common\ArtistRelation.cs" target="src\Common\ArtistRelation.cs" />
+        <file src="JamendoApi\Common\AutocompleteEntity.cs" target="src\Common\AutocompleteEntity.cs" />
+        <file src="JamendoApi\Common\FeedType.cs" target="src\Common\FeedType.cs" />
+        <file src="JamendoApi\Common\Gender.cs" target="src\Common\Gender.cs" />
+        <file src="JamendoApi\Common\Language.cs" target="src\Common\Language.cs" />
+        <file src="JamendoApi\Common\RadioType.cs" target="src\Common\RadioType.cs" />
+        <file src="JamendoApi\Common\Tempo.cs" target="src\Common\Tempo.cs" />
+        <file src="JamendoApi\Common\TrackRelation.cs" target="src\Common\TrackRelation.cs" />
+        <file src="JamendoApi\Common\TrackType.cs" target="src\Common\TrackType.cs" />
+        <file src="JamendoApi\Common\UserStatus.cs" target="src\Common\UserStatus.cs" />
+        <file src="JamendoApi\Common\VocalInstrumental.cs" target="src\Common\VocalInstrumental.cs" />
+        <file src="JamendoApi\Properties\AssemblyInfo.cs" target="src\Properties\AssemblyInfo.cs" />
+        <file src="JamendoApi\Util\ApiNameAttribute.cs" target="src\Util\ApiNameAttribute.cs" />
+        <file src="JamendoApi\Util\ArrayOrObjectConverter.cs" target="src\Util\ArrayOrObjectConverter.cs" />
+        <file src="JamendoApi\Util\EnumExtensions.cs" target="src\Util\EnumExtensions.cs" />
+        <file src="JamendoApi\JamendoApiClient.cs" target="src\JamendoApiClient.cs" />
+        <file src="JamendoApi\JamendoApiResponse.cs" target="src\JamendoApiResponse.cs" />
+    </files>
+</package>

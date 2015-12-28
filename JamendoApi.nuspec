@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>JamendoApi</id>
+        <version>1.0.0-beta</version>
+        <title>Inofficial Jamendo Api Client</title>
+        <authors>Banane9</authors>
+        <owners>Banane9</owners>
+        <projectUrl>http://github.com/Banane9/JamendoApi</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Client for the Jamendo Api v3.0</description>
+        <summary>Client for the Jamendo Api v3.0</summary>
+        <releaseNotes>First release.
+
+There might be inconsistencies, though everything should work as far as I know.</releaseNotes>
+        <copyright>Banane9</copyright>
+        <language>en</language>
+        <tags>jamendo api rest json jam music library artists albums tracks</tags>
+        <dependencies>
+            <dependency id="Microsoft.Net.Http" version="2.2.29" />
+            <dependency id="Newtonsoft.Json" version="7.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\MonoAndroid\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\MonoAndroid\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\MonoTouch\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\MonoTouch\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\net45\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\net45\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\netcore45\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\netcore45\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\portable-net45+wp8+win8\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\portable-net45+wp8+win8\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\wp8\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\wp8\JamendoApi.xml" />
+        <file src="JamendoApi\bin\Release\JamendoApi.dll" target="lib\wpa81\JamendoApi.dll" />
+        <file src="JamendoApi\bin\Release\JamendoApi.xml" target="lib\wpa81\JamendoApi.xml" />
+    </files>
+</package>
