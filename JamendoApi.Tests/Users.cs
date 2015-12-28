@@ -1,4 +1,5 @@
 ﻿using JamendoApi.ApiEntities.Users;
+using JamendoApi.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
@@ -33,7 +34,7 @@ namespace JamendoApi.Tests
             Assert.AreEqual("https://imgjam1.jamendo.com/artists/t/tryad.jpg", artist.Image);
             Assert.AreEqual(new DateTime(2005, 04, 13), artist.JoinDate);
             Assert.AreEqual(new DateTime(2013, 09, 09, 12, 01, 44), artist.UpdateDate);
-            Assert.AreEqual(1u, artist.Relations[ArtistsUser.Artist.Relation.Fan]);
+            Assert.AreEqual(1u, artist.Relations[ArtistRelation.Fan]);
         }
     }
 }

@@ -62,5 +62,50 @@ namespace JamendoApi
             return serializer.Deserialize<JamendoApiResponse<TResult>>(
                 new JsonTextReader(new StreamReader(await httpResponse.Content.ReadAsStreamAsync())));
         }
+
+        /// <summary>
+        /// Gets a stream of the zip that contains the album specified by the Id.
+        /// </summary>
+        /// <param name="albumId">The album Id.</param>
+        /// <returns>Stream of the zip of the album.</returns>
+        public async Task<Stream> GetAlbumZip(uint albumId)
+        {
+            var httpResponse = await httpClient.GetAsync(baseUrl + "/albums/file?client_id=" + clientId + "&id=" + albumId);
+
+            if (!httpResponse.IsSuccessStatusCode)
+                return null;
+
+            return await httpResponse.Content.ReadAsStreamAsync();
+        }
+
+        /// <summary>
+        /// Gets a stream of the zip that contains the playlist specified by the Id.
+        /// </summary>
+        /// <param name="playlistId">The playlist Id.</param>
+        /// <returns>Stream of the zip of the playlist.</returns>
+        public async Task<Stream> GetPlaylistZip(uint playlistId)
+        {
+            var httpResponse = await httpClient.GetAsync(baseUrl + "/playlists/file?client_id=" + clientId + "&id=" + playlistId);
+
+            if (!httpResponse.IsSuccessStatusCode)
+                return null;
+
+            return await httpResponse.Content.ReadAsStreamAsync();
+        }
+
+        /// <summary>
+        /// Gets a stream of the mp3 of the track specified by the Id.
+        /// </summary>
+        /// <param name="trackId">The track Id.</param>
+        /// <returns>Stream of the mp3 of the track.</returns>
+        public async Task<Stream> GetTrackMp3(uint trackId)
+        {
+            var httpResponse = await httpClient.GetAsync(baseUrl + "/tracks/file?client_id=" + clientId + "&id=" + trackId);
+
+            if (!httpResponse.IsSuccessStatusCode)
+                return null;
+
+            return await httpResponse.Content.ReadAsStreamAsync();
+        }
     }
 }
