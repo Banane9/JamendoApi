@@ -10,10 +10,12 @@ using System.Threading.Tasks;
 
 namespace JamendoApi
 {
+    /// <summary>
+    /// Represents the client to query the Jamendo Api v3.0.
+    /// </summary>
     public sealed class JamendoApiClient
     {
         private const string baseUrl = "https://api.jamendo.com/v3.0";
-        private const string format = "json";
         private readonly string clientId;
 
         private readonly HttpClient httpClient;
@@ -54,13 +56,7 @@ namespace JamendoApi
         /// <returns>The deserialized response or null if the call wasn't successful.</returns>
         public async Task<JamendoApiResponse<TResult>> Call<TResult>(CallInformation<TResult> callInfo)
         {
-            var httpResponse = await httpClient.GetAsync(baseUrl + callInfo.GetQueryString(clientId, format));
-
-            if (!httpResponse.IsSuccessStatusCode)
-                return null;
-
-            return serializer.Deserialize<JamendoApiResponse<TResult>>(
-                new JsonTextReader(new StreamReader(await httpResponse.Content.ReadAsStreamAsync())));
+            return deserialize<TResult>(await get(callInfo.GetQueryString(clientId)));
         }
 
         /// <summary>
@@ -70,12 +66,7 @@ namespace JamendoApi
         /// <returns>Stream of the zip of the album.</returns>
         public async Task<Stream> GetAlbumZip(uint albumId)
         {
-            var httpResponse = await httpClient.GetAsync(baseUrl + "/albums/file?client_id=" + clientId + "&id=" + albumId);
-
-            if (!httpResponse.IsSuccessStatusCode)
-                return null;
-
-            return await httpResponse.Content.ReadAsStreamAsync();
+            return await get($"{baseUrl}/albums/file?client_id={clientId}&id={albumId}");
         }
 
         /// <summary>
@@ -85,12 +76,7 @@ namespace JamendoApi
         /// <returns>Stream of the zip of the playlist.</returns>
         public async Task<Stream> GetPlaylistZip(uint playlistId)
         {
-            var httpResponse = await httpClient.GetAsync(baseUrl + "/playlists/file?client_id=" + clientId + "&id=" + playlistId);
-
-            if (!httpResponse.IsSuccessStatusCode)
-                return null;
-
-            return await httpResponse.Content.ReadAsStreamAsync();
+            return await get($"/playlists/file?client_id={clientId}&id={playlistId}");
         }
 
         /// <summary>
@@ -100,7 +86,21 @@ namespace JamendoApi
         /// <returns>Stream of the mp3 of the track.</returns>
         public async Task<Stream> GetTrackMp3(uint trackId)
         {
-            var httpResponse = await httpClient.GetAsync(baseUrl + "/tracks/file?client_id=" + clientId + "&id=" + trackId);
+            return await get($"/tracks/file?client_id={clientId}&id={trackId}");
+        }
+
+        private JamendoApiResponse<TResult> deserialize<TResult>(Stream stream)
+        {
+            if (stream == null)
+                return null;
+
+            return serializer.Deserialize<JamendoApiResponse<TResult>>(
+                new JsonTextReader(new StreamReader(stream)));
+        }
+
+        private async Task<Stream> get(string suffixUrl)
+        {
+            var httpResponse = await httpClient.GetAsync(baseUrl + suffixUrl);
 
             if (!httpResponse.IsSuccessStatusCode)
                 return null;

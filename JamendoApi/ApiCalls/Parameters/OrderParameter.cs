@@ -31,7 +31,7 @@ namespace JamendoApi.ApiCalls.Parameters
 
         protected override string getValueString()
         {
-            return ((Enum)(object)Value).GetName() + "_" + Direction.GetName();
+            return $"{((Enum)(object)Value).GetName()}_{Direction.GetName()}";
         }
     }
 

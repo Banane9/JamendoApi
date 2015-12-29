@@ -38,7 +38,7 @@ namespace JamendoApi.ApiCalls.Parameters
 
             public override string ToString()
             {
-                return StartPosition + "_" + EndPosition;
+                return $"{StartPosition}_{EndPosition}";
             }
         }
     }

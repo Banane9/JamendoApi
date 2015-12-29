@@ -7,8 +7,6 @@ namespace JamendoApi.ApiCalls
     /// <summary>
     /// Represents the generic base for all parameters.
     /// </summary>
-    /// <typeparam name="TParameter"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
     public abstract class Parameter<TParameter, TValue> : Parameter where TParameter : Parameter<TParameter, TValue>, new()
     {
         /// <summary>
@@ -61,7 +59,7 @@ namespace JamendoApi.ApiCalls
         /// <returns>The parameter's parameter string.</returns>
         public string GetParameterString()
         {
-            return Name + "=" + getValueString();
+            return $"{Name}={getValueString()}";
         }
 
         public override string ToString()

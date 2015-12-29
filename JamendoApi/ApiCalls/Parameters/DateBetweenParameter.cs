@@ -28,7 +28,7 @@ namespace JamendoApi.ApiCalls.Parameters
 
         public override string ToString()
         {
-            return Start.ToString(DateFormat) + "_" + End.ToString(DateFormat);
+            return $"{Start.ToString(DateFormat)}_{End.ToString(DateFormat)}";
         }
     }
 

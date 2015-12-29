@@ -38,7 +38,7 @@ namespace JamendoApi.ApiCalls.Parameters
 
             public override string ToString()
             {
-                return Start.ToString() + "_" + End.ToString();
+                return $"{Start.ToString()}_{End.ToString()}";
             }
         }
     }

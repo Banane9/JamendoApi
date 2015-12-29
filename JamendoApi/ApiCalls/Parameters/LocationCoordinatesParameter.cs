@@ -30,7 +30,7 @@ namespace JamendoApi.ApiCalls.Parameters
 
             public override string ToString()
             {
-                return Latitude + "_" + Longitude;
+                return $"{Latitude}_{Longitude}";
             }
         }
     }
