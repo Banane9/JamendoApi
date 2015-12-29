@@ -11,8 +11,8 @@ using System.Resources;
 [assembly: AssemblyProduct("JamendoApi")]
 [assembly: AssemblyCopyright("Copyright © Banane9 2015")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("en")]
-[assembly: NeutralResourcesLanguage("en")]
+[assembly: AssemblyCulture("")]
+[assembly: NeutralResourcesLanguage("")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
