@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>JamendoApi</id>
-        <version>1.0.0-beta</version>
+        <version>1.0.0</version>
         <title>Inofficial Jamendo Api Client</title>
         <authors>Banane9</authors>
         <owners>Banane9</owners>
         <projectUrl>http://github.com/Banane9/JamendoApi</projectUrl>
+        <iconUrl>http://banane9.github.io/favicon.ico</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Client for the Jamendo Api v3.0</description>
         <summary>Client for the Jamendo Api v3.0</summary>
-        <releaseNotes>First release.
+        <releaseNotes>Full release.
 
-There might be inconsistencies, though everything should work as far as I know.</releaseNotes>
+Now supports read methods and deserialization of responses is async too.</releaseNotes>
         <copyright>Banane9</copyright>
-        <language>en</language>
+        <language />
         <tags>jamendo api rest json jam music library artists albums tracks</tags>
         <dependencies>
             <dependency id="Microsoft.Net.Http" version="2.2.29" />
@@ -136,6 +137,7 @@ There might be inconsistencies, though everything should work as far as I know.<
         <file src="JamendoApi\ApiEntities\Radios\StreamRadio.cs" target="src\ApiEntities\Radios\StreamRadio.cs" />
         <file src="JamendoApi\ApiEntities\Reviews\AlbumReview.cs" target="src\ApiEntities\Reviews\AlbumReview.cs" />
         <file src="JamendoApi\ApiEntities\Reviews\TrackReview.cs" target="src\ApiEntities\Reviews\TrackReview.cs" />
+        <file src="JamendoApi\ApiEntities\SetUser\EmptyResult.cs" target="src\ApiEntities\SetUser\EmptyResult.cs" />
         <file src="JamendoApi\ApiEntities\Tracks\BasicTrack.cs" target="src\ApiEntities\Tracks\BasicTrack.cs" />
         <file src="JamendoApi\ApiEntities\Tracks\SimilarTrack.cs" target="src\ApiEntities\Tracks\SimilarTrack.cs" />
         <file src="JamendoApi\ApiEntities\Users\AlbumsUser.cs" target="src\ApiEntities\Users\AlbumsUser.cs" />
@@ -160,7 +162,9 @@ There might be inconsistencies, though everything should work as far as I know.<
         <file src="JamendoApi\Util\ApiNameAttribute.cs" target="src\Util\ApiNameAttribute.cs" />
         <file src="JamendoApi\Util\ArrayOrObjectConverter.cs" target="src\Util\ArrayOrObjectConverter.cs" />
         <file src="JamendoApi\Util\EnumExtensions.cs" target="src\Util\EnumExtensions.cs" />
+        <file src="JamendoApi\ApiFile.cs" target="src\ApiFile.cs" />
         <file src="JamendoApi\JamendoApiClient.cs" target="src\JamendoApiClient.cs" />
         <file src="JamendoApi\JamendoApiResponse.cs" target="src\JamendoApiResponse.cs" />
+        <file src="JamendoApi\JamendoWriteApiClient.cs" target="src\JamendoWriteApiClient.cs" />
     </files>
 </package>

@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>JamendoApi</id>
-        <version>1.0.0-beta</version>
+        <version>1.0.0</version>
         <title>Inofficial Jamendo Api Client</title>
         <authors>Banane9</authors>
         <owners>Banane9</owners>
         <projectUrl>http://github.com/Banane9/JamendoApi</projectUrl>
+        <iconUrl>http://banane9.github.io/favicon.ico</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Client for the Jamendo Api v3.0</description>
         <summary>Client for the Jamendo Api v3.0</summary>
-        <releaseNotes>First release.
+        <releaseNotes>Full release.
 
-There might be inconsistencies, though everything should work as far as I know.</releaseNotes>
+Now supports read methods and deserialization of responses is async too.</releaseNotes>
         <copyright>Banane9</copyright>
-        <language>en</language>
+        <language />
         <tags>jamendo api rest json jam music library artists albums tracks</tags>
         <dependencies>
             <dependency id="Microsoft.Net.Http" version="2.2.29" />

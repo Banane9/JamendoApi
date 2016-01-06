@@ -132,6 +132,7 @@
     <Compile Include="ApiEntities\Artists\MusicInfoArtist.cs" />
     <Compile Include="ApiEntities\Artists\TracksArtist.cs" />
     <Compile Include="ApiEntities\Autocomplete\Matches.cs" />
+    <Compile Include="ApiEntities\SetUser\EmptyResult.cs" />
     <Compile Include="ApiEntities\Users\AlbumsUser.cs" />
     <Compile Include="ApiEntities\Users\ArtistsUser.cs" />
     <Compile Include="ApiEntities\Users\BasicUser.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="ApiEntities\Playlists\BasicPlaylist.cs" />
     <Compile Include="ApiEntities\Playlists\TracksPlaylist.cs" />
     <Compile Include="ApiEntities\Radios\BasicRadio.cs" />
+    <Compile Include="ApiFile.cs" />
     <Compile Include="Common\AlbumRelation.cs" />
     <Compile Include="Common\ArtistRelation.cs" />
     <Compile Include="Common\RadioType.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Common\VocalInstrumental.cs" />
     <Compile Include="JamendoApiClient.cs" />
     <Compile Include="JamendoApiResponse.cs" />
+    <Compile Include="JamendoWriteApiClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ApiNameAttribute.cs" />
     <Compile Include="Util\ArrayOrObjectConverter.cs" />
