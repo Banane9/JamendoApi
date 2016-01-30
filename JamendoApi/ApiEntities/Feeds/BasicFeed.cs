@@ -134,13 +134,34 @@ namespace JamendoApi.ApiEntities.Feeds
             AvailableLanguages = availableLanguages.Select(code => languages[code]).ToArray();
 
             Title = new ReadOnlyDictionary<Language, string>(
-                title.ToDictionary(title => languages[title.Key], title => title.Value));
+                languages.ToDictionary(lang => lang.Value, lang =>
+                {
+                    string langTitle;
+                    if (title.TryGetValue(lang.Key, out langTitle))
+                        return langTitle;
+                    else
+                        return string.Empty;
+                }));
 
             Subtitle = new ReadOnlyDictionary<Language, string>(
-                subtitle.ToDictionary(subtitle => languages[subtitle.Key], subtitle => subtitle.Value));
+                languages.ToDictionary(lang => lang.Value, lang =>
+                {
+                    string langSubtitle;
+                    if (subtitle.TryGetValue(lang.Key, out langSubtitle))
+                        return langSubtitle;
+                    else
+                        return string.Empty;
+                }));
 
             Text = new ReadOnlyDictionary<Language, string>(
-                text.ToDictionary(text => languages[text.Key], text => text.Value));
+                languages.ToDictionary(lang => lang.Value, lang =>
+                {
+                    string langText;
+                    if (text.TryGetValue(lang.Key, out langText))
+                        return langText;
+                    else
+                        return string.Empty;
+                }));
         }
 
         /// <summary>
