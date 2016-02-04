@@ -25,15 +25,15 @@ namespace JamendoApi.ApiEntities.Feeds
         private string[] availableLanguages = null;
 
         [JsonProperty(PropertyName = "subtitle", Required = Required.Always)]
-        [JsonConverter(typeof(ArrayOrObjectConverter))]
+        [JsonConverter(typeof(ArrayOrObjectConverter<Dictionary<string, string>>))]
         private Dictionary<string, string> subtitle = null;
 
         [JsonProperty(PropertyName = "text", Required = Required.Always)]
-        [JsonConverter(typeof(ArrayOrObjectConverter))]
+        [JsonConverter(typeof(ArrayOrObjectConverter<Dictionary<string, string>>))]
         private Dictionary<string, string> text = null;
 
         [JsonProperty(PropertyName = "title", Required = Required.Always)]
-        [JsonConverter(typeof(ArrayOrObjectConverter))]
+        [JsonConverter(typeof(ArrayOrObjectConverter<Dictionary<string, string>>))]
         private Dictionary<string, string> title = null;
 
         /// <summary>
