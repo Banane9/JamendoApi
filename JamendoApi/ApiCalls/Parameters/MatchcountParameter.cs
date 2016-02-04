@@ -18,7 +18,7 @@ namespace JamendoApi.ApiCalls.Parameters
             : base(true)
         { }
 
-        public MatchcountParameter(bool count)
+        internal MatchcountParameter(bool count)
             : base(count)
         { }
     }
