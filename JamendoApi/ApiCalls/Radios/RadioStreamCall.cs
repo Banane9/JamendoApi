@@ -57,7 +57,7 @@ namespace JamendoApi.ApiCalls.Radios
 
         public override string Path
         {
-            get { return "radios/stream"; }
+            get { return "/radios/stream"; }
         }
     }
 }
