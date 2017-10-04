@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>JamendoApi</id>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <title>Inofficial Jamendo Api Client</title>
         <authors>Banane9</authors>
         <owners>Banane9</owners>
@@ -13,7 +13,9 @@
         <summary>Client for the Jamendo Api v3.0</summary>
         <releaseNotes>Full release.
 
-Now supports read methods and deserialization of responses is async too.</releaseNotes>
+Now supports read methods and deserialization of responses is async too.
+
+Added workaround for the API returning an empty array instead of the usual object when there's no match in the autocomplete API.</releaseNotes>
         <copyright>Banane9</copyright>
         <language />
         <tags>jamendo api rest json jam music library artists albums tracks</tags>

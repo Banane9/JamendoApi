@@ -86,6 +86,7 @@ namespace JamendoApi
         /// <summary>
         /// Gets a stream of the specified file type specified by the Id.
         /// </summary>
+        /// <param name="file">The type of the file.</param>
         /// <param name="id">The Id of the file.</param>
         /// <returns>Stream of the file.</returns>
         public async Task<Stream> GetFileAsync(ApiFile file, uint id)

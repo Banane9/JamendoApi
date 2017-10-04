@@ -36,7 +36,7 @@ namespace JamendoApi.Tests
         [TestMethod]
         public void BasicAlbumsCallSuccessful()
         {
-            var client = new JamendoApiClient("9d9f42e3");
+            var client = new JamendoApiClient("9e123262");
             var response = client.CallAsync(new AlbumsCall { Ids = new IdParameter(24u) }).Result;
 
             var result = response.Results[0];

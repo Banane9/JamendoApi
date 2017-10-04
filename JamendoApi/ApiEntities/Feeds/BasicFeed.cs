@@ -136,8 +136,7 @@ namespace JamendoApi.ApiEntities.Feeds
             Title = new ReadOnlyDictionary<Language, string>(
                 languages.ToDictionary(lang => lang.Value, lang =>
                 {
-                    string langTitle;
-                    if (title.TryGetValue(lang.Key, out langTitle))
+                    if (title.TryGetValue(lang.Key, out string langTitle))
                         return langTitle;
                     else
                         return string.Empty;
@@ -146,8 +145,7 @@ namespace JamendoApi.ApiEntities.Feeds
             Subtitle = new ReadOnlyDictionary<Language, string>(
                 languages.ToDictionary(lang => lang.Value, lang =>
                 {
-                    string langSubtitle;
-                    if (subtitle.TryGetValue(lang.Key, out langSubtitle))
+                    if (subtitle.TryGetValue(lang.Key, out string langSubtitle))
                         return langSubtitle;
                     else
                         return string.Empty;
@@ -156,8 +154,7 @@ namespace JamendoApi.ApiEntities.Feeds
             Text = new ReadOnlyDictionary<Language, string>(
                 languages.ToDictionary(lang => lang.Value, lang =>
                 {
-                    string langText;
-                    if (text.TryGetValue(lang.Key, out langText))
+                    if (text.TryGetValue(lang.Key, out string langText))
                         return langText;
                     else
                         return string.Empty;
