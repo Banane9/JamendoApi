@@ -37,13 +37,13 @@ namespace JamendoApi.ApiCalls
         public string GetQueryString(string clientId)
         {
             return $@"{Path}?client_id={clientId}&format={format}&{string.Join("&",
-                NonNullParameters.Where(parameter => parameter != null).Select(parameter => parameter.GetParameterString()))}";
+                NonNullParameters.Select(parameter => parameter.GetParameterString()))}";
         }
 
         public override string ToString()
         {
             return $@"{Path}?{string.Join("&",
-                NonNullParameters.Where(parameter => parameter != null).Select(parameter => parameter.GetParameterString()))}";
+                NonNullParameters.Select(parameter => parameter.GetParameterString()))}";
         }
     }
 }
